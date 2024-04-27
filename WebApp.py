@@ -220,5 +220,13 @@ def no_parkinsons_page():
              "By incorporating these suggestions and staying informed, you can continue "
              "to prioritize your well-being and reduce your risk of future health issues.")
 
+if st.button('Parkinson Test Result'):
+    # ... (Get input data, prediction, and probabilities) ...
+
+    if prediction_message == "The Person does not have Parkinson's Disease":
+        no_parkinsons_page()  # Call the new page function
+    else:
+        st.success(prediction_message)
+
 if __name__ == '__main__':
     main()
