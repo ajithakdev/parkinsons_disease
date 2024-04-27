@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 
 # loading the saved model
-loaded_model = pickle.load(open('C:/Users/Lenovo/Downloads/MainProject/trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 def parkinsons_prediction(input_data):
     # Define the input data
