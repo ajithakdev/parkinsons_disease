@@ -115,87 +115,88 @@ Some other research has shown that people who consume caffeine — which is foun
         if st.button('Submit'):
         # Process the contact information (e.g., send an email, store in a database, etc.)
             st.success('Thank you for your message! We will get back to you soon.')
-
-if selected == 'Prediction':
-    # Getting the input data from the user
-    st.title('Parkinson Prediction WebApp')
-    col1, col2, col3, col4, col5 = st.columns(5)
-
-    with col1:
-        MDVP_Fo_Hz = st.text_input('Enter MDVP:Fo(Hz)')
-    with col2:
-        MDVP_Fhi_Hz = st.text_input('Enter MDVP:Fhi(Hz)')
-    with col3:
-        MDVP_Flo_Hz = st.text_input('Enter MDVP:Flo(Hz)')
-    with col4:
-        MDVP_Jitter_percent = st.text_input('Enter MDVP:Jitter(%)')
-    with col5:
-        MDVP_Jitter_Abs = st.text_input('Enter MDVP:Jitter(Abs)')
-    with col1:
-        MDVP_RAP = st.text_input('Enter MDVP:RAP')
-    with col2:
-        MDVP_PPQ = st.text_input('Enter MDVP:PPQ')
-    with col3:
-        Jitter_DDP = st.text_input('Enter Jitter:DDP')
-    with col4:
-        MDVP_Shimmer = st.text_input('Enter MDVP:Shimmer')
-    with col5:
-        Shimmer_dB = st.text_input('Enter Shimmer:dB')
-    with col1:
-        Shimmer_APQ3 = st.text_input('Enter Shimmer:APQ3')
-    with col2:
-        Shimmer_APQ5 = st.text_input('Enter Shimmer:APQ5')
-    with col3:
-        MDVP_APQ = st.text_input('Enter MDVP:APQ')
-    with col4:
-        Shimmer_DDA = st.text_input('Enter Shimmer:DDA')
-    with col5:
-        NHR = st.text_input('Enter NHR')
-    with col1:
-        HNR = st.text_input('Enter HNR')
-    with col2:
-        RPDE = st.text_input('Enter RPDE')
-    with col3:
-        DFA = st.text_input('Enter DFA')
-    with col4:
-        spread1 = st.text_input('Enter spread1')
-    with col5:
-        spread2 = st.text_input('Enter spread2')
-    with col1:
-        D2 = st.text_input('Enter D2')
-    with col2:
-        PPE = st.text_input('Enter PPE')
-
-    st.text("Or")
-    datas = st.file_uploader('File Uploader...')
-
-    # code for prediction
-    if st.button('Parkinson Test Result'):
-        input_data = [
-            MDVP_Fo_Hz, MDVP_Fhi_Hz, MDVP_Flo_Hz, MDVP_Jitter_percent, MDVP_Jitter_Abs,
-            MDVP_RAP, MDVP_PPQ, Jitter_DDP, MDVP_Shimmer, Shimmer_dB, Shimmer_APQ3,
-            Shimmer_APQ5, MDVP_APQ, Shimmer_DDA, NHR, HNR, RPDE, DFA, spread1, spread2,
-            D2, PPE
-        ]
-        if any(input_data):  # Check if any input data is provided
-            st.success(parkinsons_prediction(input_data))
-        else:
-            st.warning('Please provide input data')
+                if selected == 'Prediction':
+                # Getting the input data from the user
+                st.title('Parkinson Prediction WebApp')
+                col1, col2, col3, col4, col5 = st.columns(5)
+            
+                with col1:
+                    MDVP_Fo_Hz = st.text_input('Enter MDVP:Fo(Hz)')
+                with col2:
+                    MDVP_Fhi_Hz = st.text_input('Enter MDVP:Fhi(Hz)')
+                with col3:
+                    MDVP_Flo_Hz = st.text_input('Enter MDVP:Flo(Hz)')
+                with col4:
+                    MDVP_Jitter_percent = st.text_input('Enter MDVP:Jitter(%)')
+                with col5:
+                    MDVP_Jitter_Abs = st.text_input('Enter MDVP:Jitter(Abs)')
+                with col1:
+                    MDVP_RAP = st.text_input('Enter MDVP:RAP')
+                with col2:
+                    MDVP_PPQ = st.text_input('Enter MDVP:PPQ')
+                with col3:
+                    Jitter_DDP = st.text_input('Enter Jitter:DDP')
+                with col4:
+                    MDVP_Shimmer = st.text_input('Enter MDVP:Shimmer')
+                with col5:
+                    Shimmer_dB = st.text_input('Enter Shimmer:dB')
+                with col1:
+                    Shimmer_APQ3 = st.text_input('Enter Shimmer:APQ3')
+                with col2:
+                    Shimmer_APQ5 = st.text_input('Enter Shimmer:APQ5')
+                with col3:
+                    MDVP_APQ = st.text_input('Enter MDVP:APQ')
+                with col4:
+                    Shimmer_DDA = st.text_input('Enter Shimmer:DDA')
+                with col5:
+                    NHR = st.text_input('Enter NHR')
+                with col1:
+                    HNR = st.text_input('Enter HNR')
+                with col2:
+                    RPDE = st.text_input('Enter RPDE')
+                with col3:
+                    DFA = st.text_input('Enter DFA')
+                with col4:
+                    spread1 = st.text_input('Enter spread1')
+                with col5:
+                    spread2 = st.text_input('Enter spread2')
+                with col1:
+                    D2 = st.text_input('Enter D2')
+                with col2:
+                    PPE = st.text_input('Enter PPE')
+            
+                st.text("Or")
+                datas = st.file_uploader('File Uploader...')
+            
                 # code for prediction
-    if st.button('Parkinson Test Result'):
-        input_data = [
-            MDVP_Fo_Hz, MDVP_Fhi_Hz,  # Add other input data here
-        ]
+                if st.button('Parkinson Test Result'):
+                    input_data = [
+                        MDVP_Fo_Hz, MDVP_Fhi_Hz, MDVP_Flo_Hz, MDVP_Jitter_percent, MDVP_Jitter_Abs,
+                        MDVP_RAP, MDVP_PPQ, Jitter_DDP, MDVP_Shimmer, Shimmer_dB, Shimmer_APQ3,
+                        Shimmer_APQ5, MDVP_APQ, Shimmer_DDA, NHR, HNR, RPDE, DFA, spread1, spread2,
+                        D2, PPE
+                    ]
+                    if any(input_data):  # Check if any input data is provided
+                        st.success(parkinsons_prediction(input_data))
+                    else:
+                        st.warning('Please provide input data')
+                            # code for prediction
+                if st.button('Parkinson Test Result'):
+                    input_data = [
+                        MDVP_Fo_Hz, MDVP_Fhi_Hz,  # Add other input data here
+                    ]
+            
+                    if any(input_data):  # Check if any input data is provided
+                        prediction_message = parkinsons_prediction(input_data)
+            
+                        if prediction_message == "The Person does not have Parkinson's Disease":
+                            no_parkinsons_page()
+                        else:
+                            st.success(prediction_message)
+                    else:
+                        st.warning('Please provide input data')
 
-        if any(input_data):  # Check if any input data is provided
-            prediction_message = parkinsons_prediction(input_data)
 
-            if prediction_message == "The Person does not have Parkinson's Disease":
-                no_parkinsons_page()
-            else:
-                st.success(prediction_message)
-        else:
-            st.warning('Please provide input data')
 
             
 
