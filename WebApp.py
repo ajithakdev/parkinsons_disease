@@ -6,34 +6,18 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 
-# loading the saved model
+# Load the saved model
 
 loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 
 def parkinsons_prediction(input_data):
-
-    # Define the input data
-
     input_data = np.array(input_data, dtype=float)
-
-    # Reshape the input data
-
     input_data_reshaped = input_data.reshape(1, -1)
-
-    # Define and fit a StandardScaler on the input data
-
     scaler = StandardScaler()
     scaler.fit(input_data_reshaped)
-
-    # Transform the input data
-
     std_data = scaler.transform(input_data_reshaped)
-
-    # Make a prediction using the loaded model and the scaled input data
-
     prediction = loaded_model.predict(std_data)
-
     if prediction[0] == 0:
         return "The Person does not have Parkinson's Disease"
     else:
@@ -41,15 +25,14 @@ def parkinsons_prediction(input_data):
 
 
 def main():
-
-    # sidebar for navigate
-
     with st.sidebar:
         selected = option_menu('Parkinsons Disease Prediction',
                                ['About parkinsons', 'Prediction',
                                'Contact us'],
                                icons=['file-earmark-person-fill',
-                               'search', 'envelope'], default_index=0)  # means firstly it shows index 0th code ie.,About parkinson
+                               'search', 'envelope'], default_index=0)
+
+           # means firstly it shows index 0th code ie.,About parkinson
 
     # About parkinson page
 
@@ -80,7 +63,8 @@ Although Parkinson's disease can't be cured, medicines might significantly impro
                      unsafe_allow_html=True)
 
         with col2:
-            st.image('1234.png', width=160)
+            st.image('C:/Users/Lenovo/Downloads/MainProject/1234.png',
+                     width=160)
 
         st.markdown("""
 <div style='font-family: Comic Sans MS, Courier; font-size: 16px;'>
@@ -144,6 +128,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
         # Getting the input data from the user
 
         st.title('Parkinson Prediction WebApp')
+
         (col1, col2, col3, col4, col5) = st.columns(5)
 
         with col1:
@@ -190,7 +175,6 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
             D2 = st.text_input('Enter D2')
         with col2:
             PPE = st.text_input('Enter PPE')
-
         st.text('Or')
         datas = st.file_uploader('File Uploader...')
 
@@ -221,7 +205,11 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 D2,
                 PPE,
                 ]
-            if any(input_data):  # Check if any input data is provided
+
+            if any(not value for value in input_data):
+                st.error('Please provide data for all input fields.')
+            else:
+                input_data = [float(value) for value in input_data]  # Convert to floats
                 prediction_message = parkinsons_prediction(input_data)
 
                 if prediction_message \
@@ -229,25 +217,6 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                     no_parkinsons_page()
                 else:
                     st.success(prediction_message)
-            else:
-                st.warning('Please provide input data')
-
-                            # code for prediction
-
-                if st.button('Parkinson Test Result'):
-                    input_data = [MDVP_Fo_Hz, MDVP_Fhi_Hz]  # Add other input data here
-
-                    if any(input_data):  # Check if any input data is provided
-                        prediction_message = \
-                            parkinsons_prediction(input_data)
-
-                        if prediction_message \
-                            == "The Person does not have Parkinson's Disease":
-                            no_parkinsons_page()
-                        else:
-                            st.success(prediction_message)
-                    else:
-                        st.warning('Please provide input data')
 
 
 def no_parkinsons_page():
