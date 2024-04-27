@@ -64,7 +64,7 @@ Although Parkinson's disease can't be cured, medicines might significantly impro
 
         with col2:
             st.image('pd.png',
-                     width=560)
+                     width=360)
 
         st.markdown("""
 <div style='font-family: Comic Sans MS, Courier; font-size: 16px;'>
