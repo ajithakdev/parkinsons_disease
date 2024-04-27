@@ -179,7 +179,46 @@ Some other research has shown that people who consume caffeine — which is foun
                   ]
            st.success(parkinsons_prediction(input_data))
 
-   
+def no_parkinsons_page():
+    st.title("Great News! You Don't Have Parkinson's Disease")
+    
+    st.balloons() # Celebrate the good news!
+
+    st.write("We are thrilled to share this positive outcome with you. "
+             "While you don't have Parkinson's, it's always important to prioritize "
+             "your health and well-being.")
+
+    st.header("Tips for Maintaining a Healthy Lifestyle:")
+
+    # Use columns for better organization
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write("- Engage in regular physical activity: Aim for at least 150 minutes "
+                 "of moderate-intensity exercise or 75 minutes of vigorous-intensity "
+                 "exercise per week. Find activities you enjoy, such as brisk walking, "
+                 "swimming, or dancing.")
+        st.write("- Prioritize a balanced and nutritious diet: Focus on whole foods "
+                 "like fruits, vegetables, whole grains, and lean protein. Limit processed "
+                 "foods, sugary drinks, and unhealthy fats.")
+    
+    with col2:
+        st.write("- Get enough sleep: Aim for 7-8 hours of quality sleep each night. "
+                 "Establish a regular sleep schedule and create a relaxing bedtime routine.")
+        st.write("- Manage stress effectively: Practice relaxation techniques like deep "
+                 "breathing, meditation, or yoga. Engage in activities you find enjoyable "
+                 "and spend time with loved ones.") 
+
+    st.header("Additional Resources:")
+
+    st.write("Here are some reliable sources for health information and support:")
+    st.write("- World Health Organization (WHO): https://www.who.int/")
+    st.write("- Centers for Disease Control and Prevention (CDC): https://www.cdc.gov/")
+    # ... (Add more resources as needed) ...
+
+    st.write("Remember, maintaining a healthy lifestyle is an ongoing journey. "
+             "By incorporating these suggestions and staying informed, you can continue "
+             "to prioritize your well-being and reduce your risk of future health issues.")
 
 if __name__ == '__main__':
     main()
