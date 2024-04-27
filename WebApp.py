@@ -176,8 +176,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
             D2 = st.text_input('Enter D2')
         with col2:
             PPE = st.text_input('Enter PPE')
-        st.text('Or')
-        datas = st.file_uploader('File Uploader...')
+            
 
         st.text("Or")
         uploaded_file = st.file_uploader('File Uploader...')
