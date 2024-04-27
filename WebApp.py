@@ -63,7 +63,7 @@ Although Parkinson's disease can't be cured, medicines might significantly impro
                      unsafe_allow_html=True)
 
         with col2:
-            st.image(1234.png',
+            st.image('1234.png',
                      width=160)
 
         st.markdown("""
