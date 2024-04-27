@@ -187,7 +187,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                     df = pd.read_csv(uploaded_file)
                     input_data = df.iloc[0].tolist()
                 except Exception as e:
-                    st.error(f"Error processing file: {e}")
+                    st.error("Error processing file: %s" % e)
                     return
             else:
                 input_data = [
