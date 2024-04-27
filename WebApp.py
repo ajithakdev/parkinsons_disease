@@ -60,7 +60,7 @@ Although Parkinson's disease can't be cured, medicines might significantly impro
           
 
         with col2:
-            st.image('C:/Users/Lenovo/Downloads/MainProject/1234.png', width=160)
+            st.image('1234.png', width=160)
          
             
          
