@@ -115,7 +115,8 @@ Some other research has shown that people who consume caffeine — which is foun
         if st.button('Submit'):
         # Process the contact information (e.g., send an email, store in a database, etc.)
             st.success('Thank you for your message! We will get back to you soon.')
-                if selected == 'Prediction':
+    
+   if selected == 'Prediction':
                 # Getting the input data from the user
                 st.title('Parkinson Prediction WebApp')
                 col1, col2, col3, col4, col5 = st.columns(5)
@@ -195,10 +196,6 @@ Some other research has shown that people who consume caffeine — which is foun
                             st.success(prediction_message)
                     else:
                         st.warning('Please provide input data')
-
-
-
-            
 
 
 def no_parkinsons_page():
