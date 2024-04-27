@@ -178,6 +178,19 @@ Some other research has shown that people who consume caffeine — which is foun
               D2, PPE
                   ]
            st.success(parkinsons_prediction(input_data))
+            
+        # Prediction button and logic
+        if st.button('Parkinson Test Result'):
+           input_data = [
+              # ... (Get input data from fields) ... 
+                  ]
+           prediction_message = parkinsons_prediction(input_data)
+           # ... (Get prediction probabilities and visualizations) ...
+
+           if prediction_message == "The Person does not have Parkinson's Disease":
+               no_parkinsons_page()  # Call the new page function
+           else:
+               st.success(prediction_message)
 
 def no_parkinsons_page():
     st.title("Great News! You Don't Have Parkinson's Disease")
@@ -220,13 +233,6 @@ def no_parkinsons_page():
              "By incorporating these suggestions and staying informed, you can continue "
              "to prioritize your well-being and reduce your risk of future health issues.")
 
-if st.button('Parkinson Test Result'):
-    # ... (Get input data, prediction, and probabilities) ...
-
-    if prediction_message == "The Person does not have Parkinson's Disease":
-        no_parkinsons_page()  # Call the new page function
-    else:
-        st.success(prediction_message)
 
 if __name__ == '__main__':
     main()
