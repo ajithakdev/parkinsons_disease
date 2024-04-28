@@ -327,7 +327,7 @@ def no_parkinsons_page():
 def early_stage_parkinsons_page():
     st.title("You Have Early Stage Parkinson's Disease")
 
-    st.image('pd1.jpg', width=200)  # Add an image for emotional connection
+    st.image('pd1.jpg', width=800)  # Add an image for emotional connection
 
     st.markdown("""
     <div style='font-size: 18px; color: #FF5733; text-align: center;'>
