@@ -107,29 +107,28 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
   """,
                     unsafe_allow_html=True)
 
-    if selected == 'Contact us':
-
+    if selected == 'Contact us':      
         def contact_us_page():
-            #st.title("Contact Us")
-        
             st.markdown("""
             <h1 style='font-family: Arial, sans-serif; font-size: 36px; color: #FFFFFF; text-align: center;'>Contact Us</h1>
             <p style='font-size: 18px; color: #555555; text-align: center;'>We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
             """, unsafe_allow_html=True)
         
             # Contact Form Section
-            #st.header("Contact Form")
-        
             name = st.text_input('Name')
             email = st.text_input('Email')
             message = st.text_area('Message', height=200)
         
-            submitted = st.button('Submit')
-        
-            if submitted:
-                # Process the contact information (e.g., send an email, store in a database, etc.)
-                st.success('Thank you for your message! We will get back to you soon.')
-                animate_button()
+            # Check if all fields are filled
+            if not name or not email or not message:
+                st.warning('Please enter your name, email, and message.')
+            else:
+                submitted = st.button('Submit')
+                
+                if submitted:
+                    # Process the contact information (e.g., send an email, store in a database, etc.)
+                    st.success('Thank you for your message! We will get back to you soon.')
+                    animate_button()
         
             # Direct Contact Information Section
             st.header("Direct Contact Information")
@@ -156,6 +155,22 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 </div>
                 """, unsafe_allow_html=True)
         
+                st.markdown("""
+                <div style='font-size: 16px; color: #007bff;'>
+                <b>Social Media:</b>
+                </div>
+                """, unsafe_allow_html=True)
+                st.markdown("""
+                <div style='font-size: 16px; color: #007bff;'>
+                <b>Facebook:</b> <a href="https://www.facebook.com/" target="_blank">Facebook Page</a>
+                </div>
+                """, unsafe_allow_html=True)
+                st.markdown("""
+                <div style='font-size: 16px; color: #007bff;'>
+                <b>Twitter:</b> <a href="https://twitter.com/" target="_blank">Twitter Page</a>
+                </div>
+                """, unsafe_allow_html=True)
+                
             with col2:
                 st.markdown("""
                 <div style='font-size: 16px; color: #007bff;'>
@@ -164,11 +179,12 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 """, unsafe_allow_html=True)
         
         def animate_button():
-            # You can add animations or effects here
-            st.button('Submit', key='submit_button', help="Submit your message", on_click=animate_button)
+            # Add animation effects to the submit button
+            st.button('Submit', key='submit_button', help="Submit your message", on_click=animate_button, help="Submit your message", help="Submit your message")
         
         if __name__ == '__main__':
             contact_us_page()
+
 
 
     if selected == 'Prediction':
