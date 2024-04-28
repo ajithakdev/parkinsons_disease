@@ -2,5 +2,5 @@ streamlit
 streamlit-option-menu
 scikit-learn
 pandas
-python==3.7.12
+#python==3.7.12
 # Add any other required libraries here
