@@ -32,9 +32,9 @@ def main():
     with st.sidebar:
         selected = option_menu('Parkinsons Disease Prediction',
                                ['About parkinsons', 'Prediction', 'Recent News On PD', 'Treatment Options', 'Advices On Youtube','Inspirational Perspectives',
-                               'Contact us'],
+                               'Contact us','Project Rating','For Open Source License Contact Here'],
                                icons=['file-earmark-person-fill',
-                               'search','newspaper','prescription2','youtube','power','person-lines-fill'], default_index=0)
+                               'search','newspaper','prescription2','youtube','power','person-lines-fill','stars','sourceforge'], default_index=0)
 
            # means firstly it shows index 0th code ie.,About parkinson
 
@@ -63,7 +63,34 @@ def main():
     
         if __name__ == '__main__':
             treatment_options_page()
+
+ # below code is for rating page ----------------------------------------------   
+
+    if selected == 'Project Rating':
+
+        def project_rating_page():
+            st.title("Rate Our Project")
+    
+            # Add your content for project rating here
+    
+        if __name__ == '__main__':
+            project_rating_page()
+            
+# below code is for source_license page ----------------------------------------------
+    
+    if selected == 'For Open Source License Contact Here':
+
+        def source_license_page():
+            st.title("Source License Information")
+    
+            # Add your content for source license here
+    
+        if __name__ == '__main__':
+            source_license_page()
         
+
+
+
 # below code is for advice page ----------------------------------------------        
 
     if selected == 'Advices On Youtube':
