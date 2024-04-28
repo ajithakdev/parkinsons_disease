@@ -183,47 +183,32 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
         st.text("Or")
         uploaded_file = st.file_uploader('File Uploader...')  # Single file uploader 
 
+        # code for prediction
         if st.button('Parkinson Test Result'):
-            if uploaded_file is not None:
-                try:
-                    df = pd.read_csv(uploaded_file)
-                    input_data = df.iloc[0].tolist()
-                except Exception as e:
-                    st.error("Error processing file: %s" % e)
-                    return
-            else:
-                input_data = [
-                    MDVP_Fo_Hz,
-                    MDVP_Fhi_Hz,
-                    MDVP_Flo_Hz,
-                    MDVP_Jitter_percent,
-                    MDVP_Jitter_Abs,
-                    MDVP_RAP,
-                    MDVP_PPQ,
-                    Jitter_DDP,
-                    MDVP_Shimmer,
-                    Shimmer_dB,
-                    Shimmer_APQ3,
-                    Shimmer_APQ5,
-                    MDVP_APQ,
-                    Shimmer_DDA,
-                    NHR,
-                    HNR,
-                    RPDE,
-                    DFA,
-                    spread1,
-                    spread2,
-                    D2,
-                    PPE,
-                ]
+            input_data = [
+                MDVP_Fo_Hz, MDVP_Fhi_Hz, MDVP_Flo_Hz,
+                MDVP_Jitter_percent, MDVP_Jitter_Abs, MDVP_RAP,
+                MDVP_PPQ, Jitter_DDP, MDVP_Shimmer, Shimmer_dB,
+                Shimmer_APQ3, Shimmer_APQ5, MDVP_APQ, Shimmer_DDA,
+                NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE,
+            ]
 
             if any(not value for value in input_data):
                 st.error('Please provide data for all input fields.')
             else:
                 input_data = [float(value) for value in input_data]  # Convert to floats
+                
+                # Print input data for debugging
+                print("Input Data:", input_data)
+                
+                # Perform prediction
                 prediction_message = parkinsons_prediction(input_data)
-                if prediction_message \
-                    == "The Person does not have Parkinson's Disease":
+                
+                # Print intermediate values for debugging
+                print("Scaled Input Data:", std_data)
+                print("Prediction Result:", prediction_message)
+
+                if prediction_message == "The Person does not have Parkinson's Disease":
                     no_parkinsons_page()
                 else:
                     st.success(prediction_message)
