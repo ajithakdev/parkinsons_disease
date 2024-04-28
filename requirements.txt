@@ -2,5 +2,5 @@ streamlit
 streamlit-option-menu
 scikit-learn
 pandas
-#pickle
+pickle
 # Add any other required libraries here
