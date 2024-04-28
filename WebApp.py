@@ -108,76 +108,74 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                     unsafe_allow_html=True)
 
     if selected == 'Contact us':
-
-        import streamlit as st
-
-def contact_us_page():
-    st.title("Contact Us")
-
-    st.markdown("""
-    <h1 style='font-family: Arial, sans-serif; font-size: 36px; color: #333333; text-align: center;'>Contact Us</h1>
-    <p style='font-size: 18px; color: #555555; text-align: center;'>We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
-    """, unsafe_allow_html=True)
-
-    # Contact Form Section
-    st.header("Contact Form")
-
-    name = st.text_input('Name')
-    email = st.text_input('Email')
-    message = st.text_area('Message', height=200)
-
-    if st.button('Submit', key='submit_button'):
-        # Process the contact information (e.g., send an email, store in a database, etc.)
-        st.success('Thank you for your message! We will get back to you soon.')
-        st.button('Submit', key='submit_button', help="Submit your message", on_click=animate_button)
-
-    # Direct Contact Information Section
-    st.header("Direct Contact Information")
-
-    st.markdown("""
-    <div style='font-size: 16px; color: #555555;'>
-    If you prefer to contact us directly, here is our contact information:
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Use columns for better organization
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown("""
-        <div style='font-size: 16px; color: #007bff;'>
-        <b>Email:</b> contact@example.com
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("""
-        <div style='font-size: 16px; color: #007bff;'>
-        <b>Phone:</b> +1 (123) 456-7890
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("""
-        <div style='font-size: 16px; color: #007bff;'>
-        <b>Address:</b> 123 Street, City, Country
-        </div>
-        """, unsafe_allow_html=True)
-
-    # Map Section (Optional)
-    st.header("Our Location")
-
-    st.markdown("""
-    <div style='text-align: center;'>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2dlongitude!3dlatitude!4dzoom_level!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA4JzIwLjEiTiA2wrAyMCcxMi4zIlc!5e0!3m2!1sen!2sus!4v1646649747743!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    """, unsafe_allow_html=True)
-
-def animate_button():
-    # You can add animations or effects here
-    st.button('Submit', key='submit_button', help="Submit your message", on_click=animate_button)
-
-if __name__ == '__main__':
-    contact_us_page()
+        
+        def contact_us_page():
+            st.title("Contact Us")
+        
+            st.markdown("""
+            <h1 style='font-family: Arial, sans-serif; font-size: 36px; color: #333333; text-align: center;'>Contact Us</h1>
+            <p style='font-size: 18px; color: #555555; text-align: center;'>We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
+            """, unsafe_allow_html=True)
+        
+            # Contact Form Section
+            st.header("Contact Form")
+        
+            name = st.text_input('Name')
+            email = st.text_input('Email')
+            message = st.text_area('Message', height=200)
+        
+            if st.button('Submit', key='submit_button'):
+                # Process the contact information (e.g., send an email, store in a database, etc.)
+                st.success('Thank you for your message! We will get back to you soon.')
+                st.button('Submit', key='submit_button', help="Submit your message", on_click=animate_button)
+        
+            # Direct Contact Information Section
+            st.header("Direct Contact Information")
+        
+            st.markdown("""
+            <div style='font-size: 16px; color: #555555;'>
+            If you prefer to contact us directly, here is our contact information:
+            </div>
+            """, unsafe_allow_html=True)
+        
+            # Use columns for better organization
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.markdown("""
+                <div style='font-size: 16px; color: #007bff;'>
+                <b>Email:</b> contact@example.com
+                </div>
+                """, unsafe_allow_html=True)
+        
+                st.markdown("""
+                <div style='font-size: 16px; color: #007bff;'>
+                <b>Phone:</b> +1 (123) 456-7890
+                </div>
+                """, unsafe_allow_html=True)
+        
+            with col2:
+                st.markdown("""
+                <div style='font-size: 16px; color: #007bff;'>
+                <b>Address:</b> 123 Street, City, Country
+                </div>
+                """, unsafe_allow_html=True)
+        
+            # Map Section (Optional)
+            st.header("Our Location")
+        
+            st.markdown("""
+            <div style='text-align: center;'>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2dlongitude!3dlatitude!4dzoom_level!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA4JzIwLjEiTiA2wrAyMCcxMi4zIlc!5e0!3m2!1sen!2sus!4v1646649747743!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        def animate_button():
+            # You can add animations or effects here
+            st.button('Submit', key='submit_button', help="Submit your message", on_click=animate_button)
+        
+        if __name__ == '__main__':
+            contact_us_page()
 
     if selected == 'Prediction':
 
