@@ -226,7 +226,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 prediction_message = parkinsons_prediction(input_data)
                 if prediction_message \
                     == "The Person has Parkinson's":
-                    parkinsons_page()
+                    no_parkinsons_page()
                 else:
                     st.success(prediction_message)
             
@@ -246,7 +246,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
     #                st.success(prediction_message) 
 
 
-def parkinsons_page():
+def no_parkinsons_page():
     st.title("Great News! You Don't Have Parkinson's Disease")
 
     st.balloons()  # Celebrate the good news!
