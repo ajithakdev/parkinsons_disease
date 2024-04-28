@@ -246,6 +246,8 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
     #                st.success(prediction_message) 
 
 
+# Below code is for if NO Parkinson 
+
 def no_parkinsons_page():
     st.title("Great News! You Don't Have Parkinson's Disease")
 
@@ -285,6 +287,86 @@ def no_parkinsons_page():
 
     st.write('Remember, maintaining a healthy lifestyle is an ongoing journey. By incorporating these suggestions and staying informed, you can continue to prioritize your well-being and reduce your risk of future health issues.'
              )
+
+# Below code is for if Parkinson result 
+def early_stage_parkinsons_page():
+    st.title("You Have Early Stage Parkinson's Disease")
+
+    st.image('sad_face.png', width=200)  # Add an image for emotional connection
+
+    st.markdown("""
+    <div style='font-size: 18px; color: #FF5733; text-align: center;'>
+    <b>We understand that receiving this diagnosis can be concerning, but it's important to know that early-stage Parkinson's can be manageable with proper care and support.</b>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Add colorful and animated elements
+    st.markdown("""
+    <div style='font-size: 16px; color: #0066CC; text-align: center;'>
+    <b>What You Can Do:</b>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Animated checklist
+    st.markdown("""
+    <div style='display: flex; justify-content: center;'>
+    <ul>
+        <li style='color: #009900; font-size: 16px; animation: fadeIn 1s ease-in-out;'>
+        <span style='margin-right: 10px;'>&#10003;</span> Consult a Specialist: Schedule an appointment with a neurologist or movement disorder specialist to discuss treatment options.
+        </li>
+        <li style='color: #009900; font-size: 16px; animation: fadeIn 1s ease-in-out 0.5s;'>
+        <span style='margin-right: 10px;'>&#10003;</span> Medication Management: Follow your doctor's instructions for prescribed medications.
+        </li>
+        <li style='color: #009900; font-size: 16px; animation: fadeIn 1s ease-in-out 1s;'>
+        <span style='margin-right: 10px;'>&#10003;</span> Physical Therapy: Engage in exercises to improve mobility and strength.
+        </li>
+        <li style='color: #009900; font-size: 16px; animation: fadeIn 1s ease-in-out 1.5s;'>
+        <span style='margin-right: 10px;'>&#10003;</span> Speech Therapy: Consider sessions to maintain clear communication.
+        </li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='font-size: 16px; color: #0066CC; text-align: center;'>
+    <b>Diet and Emotional Support:</b>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Animated heart icons for emotional support
+    st.markdown("""
+    <div style='display: flex; justify-content: center;'>
+    <span style='font-size: 30px; color: #FF5733; animation: heartbeat 1s infinite; margin-right: 10px;'>&#128151;</span>
+    <span style='font-size: 30px; color: #FF5733; animation: heartbeat 1s infinite 0.5s; margin-right: 10px;'>&#128151;</span>
+    <span style='font-size: 30px; color: #FF5733; animation: heartbeat 1s infinite 1s; margin-right: 10px;'>&#128151;</span>
+    <span style='font-size: 30px; color: #FF5733; animation: heartbeat 1s infinite 1.5s; margin-right: 10px;'>&#128151;</span>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='font-size: 16px; color: #0066CC; text-align: center;'>
+    <b>Additional Resources:</b>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # List of resources with clickable links
+    st.markdown("""
+    <ul style='font-size: 16px;'>
+        <li><a href="https://www.parkinson.org/" target="_blank" style='color: #009900;'>Parkinson's Foundation</a></li>
+        <li><a href="https://www.michaeljfox.org/" target="_blank" style='color: #009900;'>Michael J. Fox Foundation</a></li>
+        <li><a href="https://www.unitywalk.org/" target="_blank" style='color: #009900;'>Parkinson's Unity Walk</a></li>
+        <li><a href="https://www.parkinsonsresources.org/" target="_blank" style='color: #009900;'>Parkinson's Resources</a></li>
+        <li><a href="https://www.pdf.org/" target="_blank" style='color: #009900;'>Parkinson's Disease Foundation</a></li>
+    </ul>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='font-size: 16px; color: #0066CC; text-align: center;'>
+    <b>Remember, while a Parkinson's diagnosis may bring challenges, there are many resources and strategies available to help you lead a fulfilling life and manage your condition effectively.</b>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Add more interactive and animated elements as needed
 
 
 if __name__ == '__main__':
