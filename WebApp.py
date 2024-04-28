@@ -21,10 +21,10 @@ def parkinsons_prediction(input_data):
     scaler.fit(input_data_reshaped)
     std_data = scaler.transform(input_data_reshaped)
     prediction = loaded_model.predict(std_data)
-    if prediction[0] === 0:
+    if prediction[0] == 0:
         return "The Person does not have Parkinson's Disease"
     else:
-        return "The Person has Parkinson's"
+        return "The Person has not Parkinson's"
 
 
 def main():
