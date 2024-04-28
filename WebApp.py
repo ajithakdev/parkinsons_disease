@@ -251,7 +251,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
 import streamlit as st
 
 def no_parkinsons_page():
-    st.title("Great News! You Don't Have Parkinson's Disease")
+    st.title("Great News! You Don't Have Parkinson's Shit 😀 But ")
 
     st.balloons()  # Celebrate the good news!
 
@@ -302,7 +302,7 @@ def no_parkinsons_page():
 
     st.header('Relaxing Quotes:')
     st.markdown("""
-        <blockquote style='font-size: 20px; text-align: center;'>
+        <blockquote style='font-size: 120px; text-align: center;'>
             "The greatest wealth is health." <br>
             <em>- Virgil</em>
         </blockquote>
