@@ -24,7 +24,8 @@ def parkinsons_prediction(input_data):
     if prediction[0] == 0:
         return "The Person does not have Parkinson's Disease"
     else:
-        return "The Person has not Parkinson's"
+        return "The Person has Parkinson's"
+        #return "The Person does not have Parkinson's Disease"
 
 
 def main():
@@ -224,8 +225,8 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 input_data = [float(value) for value in input_data]  # Convert to floats
                 prediction_message = parkinsons_prediction(input_data)
                 if prediction_message \
-                    == "The Person does not have Parkinson's Disease":
-                    no_parkinsons_page()
+                    == "The Person has Parkinson's":
+                    parkinsons_page()
                 else:
                     st.success(prediction_message)
             
@@ -245,7 +246,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
     #                st.success(prediction_message) 
 
 
-def no_parkinsons_page():
+def parkinsons_page():
     st.title("Great News! You Don't Have Parkinson's Disease")
 
     st.balloons()  # Celebrate the good news!
