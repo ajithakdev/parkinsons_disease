@@ -90,8 +90,8 @@ else:
 
 import pickle
 
-filename = 'trained_scaler.pkl'
-pickle.dump(scaler, open(filename, 'wb'))
+#filename = 'trained_scaler.pkl'
+#pickle.dump(scaler, open(filename, 'wb'))
 
 filename = 'trained_model.sav'
 pickle.dump(model,open(filename,'wb'))
