@@ -110,10 +110,10 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
     if selected == 'Contact us':
 
         def contact_us_page():
-            st.title("Contact Us")
+            #st.title("Contact Us")
         
             st.markdown("""
-            <h1 style='font-family: Arial, sans-serif; font-size: 36px; color: #333333; text-align: center;'>Contact Us</h1>
+            <h1 style='font-family: Arial, sans-serif; font-size: 36px; color: #FFFFFF; text-align: center;'>Contact Us</h1>
             <p style='font-size: 18px; color: #555555; text-align: center;'>We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
             """, unsafe_allow_html=True)
         
