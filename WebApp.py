@@ -226,9 +226,10 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 prediction_message = parkinsons_prediction(input_data)
                 if prediction_message \
                     == "The Person has Parkinson's":
-                    no_parkinsons_page()
+                    early_stage_parkinsons_page()
                 else:
-                    st.success(prediction_message)
+                    #st.success(prediction_message)
+                    no_parkinsons_page()
             
  #          if any(not value for value in input_data):
   #              st.error("Please provide data for all input fields or upload a CSV file.")
