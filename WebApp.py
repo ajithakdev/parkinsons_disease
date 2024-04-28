@@ -311,7 +311,7 @@ def no_parkinsons_page():
     st.header('Encouraging Video:')
     st.markdown("""
         <div style='text-align: center;'>
-            <iframe width="560" height="315" src="<iframe width="1678" height="767" src="https://www.youtube.com/embed/gjPt7S2dX_I" title="🍋எலுமிச்சம் பழம் வைத்தியம் 🩺|😵‍💫LEMON REMEDY 🍋| PARKINSON&#39;S CAN BE BE CURED PERMENANTLY😵‍💫 | TIPS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="<iframe width="1678" height="767" src="https://www.youtube.com/embed/gjPt7S2dX_I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" frameborder="0" allowfullscreen></iframe>
         </div>
     """, unsafe_allow_html=True)
     st.write("Watch this video for more encouragement and information.")
