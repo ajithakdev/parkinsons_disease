@@ -115,4 +115,4 @@ if (prediction[0] == 0):
   print("The Person does not have Parkinsons Disease")
 
 else:
-  print("The Person has Parkinsons")
+  print("The Person has not Parkinsons")
