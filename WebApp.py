@@ -248,7 +248,6 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
 
 
 # Below code is for if NO Parkinson 
-
 import streamlit as st
 
 def no_parkinsons_page():
@@ -301,8 +300,24 @@ def no_parkinsons_page():
         </ul>
     """, unsafe_allow_html=True)
 
+    st.header('Relaxing Quotes:')
+    st.markdown("""
+        <blockquote style='font-size: 20px; text-align: center;'>
+            "The greatest wealth is health." <br>
+            <em>- Virgil</em>
+        </blockquote>
+    """, unsafe_allow_html=True)
+
+    st.header('Encouraging Video:')
+    st.markdown("""
+        <div style='text-align: center;'>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=gjPt7S2dX_I&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D" frameborder="0" allowfullscreen></iframe>
+        </div>
+    """, unsafe_allow_html=True)
+    st.write("Watch this video for more encouragement and information.")
+
     st.write("""
-        <p style='color: #007bff;'>
+        <p style='color: #007bff; text-align: center;'>
             Remember, maintaining a healthy lifestyle is an ongoing journey. By incorporating these suggestions and staying informed, you can continue to prioritize your well-being and reduce your risk of future health issues.
         </p>
     """, unsafe_allow_html=True)
