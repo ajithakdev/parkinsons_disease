@@ -302,7 +302,7 @@ def no_parkinsons_page():
 
     st.header('Relaxing Quotes:')
     st.markdown("""
-        <blockquote style='font-size: 120px; text-align: center;'>
+        <blockquote style='font-size: 60px; text-align: center;'>
             "The greatest wealth is health." <br>
             <em>- Virgil</em>
         </blockquote>
