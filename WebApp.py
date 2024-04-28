@@ -311,7 +311,7 @@ def no_parkinsons_page():
     st.header('Encouraging Video:')
     st.markdown("""
         <div style='text-align: center;'>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=recpcNfHFHs&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZXKw-7wHiz8" frameborder="0" allowfullscreen></iframe>
         </div>
     """, unsafe_allow_html=True)
     st.write("Watch this video for more encouragement and information.")
