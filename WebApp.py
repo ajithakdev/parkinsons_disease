@@ -249,45 +249,66 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
 
 # Below code is for if NO Parkinson 
 
+import streamlit as st
+
 def no_parkinsons_page():
     st.title("Great News! You Don't Have Parkinson's Disease")
 
     st.balloons()  # Celebrate the good news!
 
-    st.write("We are thrilled to share this positive outcome with you. While you don't have Parkinson's, it's always important to prioritize your health and well-being."
-             )
+    st.markdown("""
+        <div style='font-size: 18px; color: green; text-align: center;'>
+            We are thrilled to share this positive outcome with you. While you don't have Parkinson's, it's always important to prioritize your health and well-being.
+        </div>
+    """, unsafe_allow_html=True)
 
     st.header('Tips for Maintaining a Healthy Lifestyle:')
 
     # Use columns for better organization
-
-    (col1, col2) = st.columns(2)
+    col1, col2 = st.columns(2)
 
     with col1:
-        st.write('- Engage in regular physical activity: Aim for at least 150 minutes of moderate-intensity exercise or 75 minutes of vigorous-intensity exercise per week. Find activities you enjoy, such as brisk walking, swimming, or dancing.'
-                 )
+        st.write("""
+            <h3 style='color: #007bff;'>Engage in Regular Physical Activity</h3>
+            <p>Aim for at least 150 minutes of moderate-intensity exercise or 75 minutes of vigorous-intensity exercise per week. Find activities you enjoy, such as brisk walking, swimming, or dancing.</p>
+        """, unsafe_allow_html=True)
 
-        st.write('- Prioritize a balanced and nutritious diet: Focus on whole foods like fruits, vegetables, whole grains, and lean protein. Limit processed foods, sugary drinks, and unhealthy fats.'
-                 )
+        st.write("""
+            <h3 style='color: #007bff;'>Prioritize a Balanced Diet</h3>
+            <p>Focus on whole foods like fruits, vegetables, whole grains, and lean protein. Limit processed foods, sugary drinks, and unhealthy fats.</p>
+        """, unsafe_allow_html=True)
 
     with col2:
-        st.write('- Get enough sleep: Aim for 7-8 hours of quality sleep each night. Establish a regular sleep schedule and create a relaxing bedtime routine.'
-                 )
-        st.write('- Manage stress effectively: Practice relaxation techniques like deep breathing, meditation, or yoga. Engage in activities you find enjoyable and spend time with loved ones.'
-                 )
+        st.write("""
+            <h3 style='color: #007bff;'>Get Enough Sleep</h3>
+            <p>Aim for 7-8 hours of quality sleep each night. Establish a regular sleep schedule and create a relaxing bedtime routine.</p>
+        """, unsafe_allow_html=True)
+
+        st.write("""
+            <h3 style='color: #007bff;'>Manage Stress Effectively</h3>
+            <p>Practice relaxation techniques like deep breathing, meditation, or yoga. Engage in activities you find enjoyable and spend time with loved ones.</p>
+        """, unsafe_allow_html=True)
 
     st.header('Additional Resources:')
 
-    st.write('Here are some reliable sources for health information and support:'
-             )
-    st.write('- World Health Organization (WHO): https://www.who.int/')
-    st.write('- Centers for Disease Control and Prevention (CDC): https://www.cdc.gov/'
-             )
+    st.write("""
+        <p>Here are some reliable sources for health information and support:</p>
+        <ul>
+            <li><a href='https://www.who.int/' target='_blank'>World Health Organization (WHO)</a></li>
+            <li><a href='https://www.cdc.gov/' target='_blank'>Centers for Disease Control and Prevention (CDC)</a></li>
+            <li><a href='https://www.mayoclinic.org/' target='_blank'>Mayo Clinic</a></li>
+            <!-- Add more resources as needed -->
+        </ul>
+    """, unsafe_allow_html=True)
 
-    # ... (Add more resources as needed) ...
+    st.write("""
+        <p style='color: #007bff;'>
+            Remember, maintaining a healthy lifestyle is an ongoing journey. By incorporating these suggestions and staying informed, you can continue to prioritize your well-being and reduce your risk of future health issues.
+        </p>
+    """, unsafe_allow_html=True)
 
-    st.write('Remember, maintaining a healthy lifestyle is an ongoing journey. By incorporating these suggestions and staying informed, you can continue to prioritize your well-being and reduce your risk of future health issues.'
-             )
+# Test the function
+#no_parkinsons_page()
 
 # Below code is for if Parkinson result 
 def early_stage_parkinsons_page():
