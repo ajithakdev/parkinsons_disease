@@ -41,6 +41,9 @@ print(X)
 print(Y)
 
 scaler = StandardScaler()
+# Fit the scaler on the training data before splitting
+scaler = StandardScaler()
+scaler.fit(X)  # Fit on the entire dataset before splitting
 
 scaler.fit(X_train)
 
