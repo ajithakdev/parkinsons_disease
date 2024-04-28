@@ -31,15 +31,66 @@ def parkinsons_prediction(input_data):
 def main():
     with st.sidebar:
         selected = option_menu('Parkinsons Disease Prediction',
-                               ['About parkinsons', 'Prediction',
+                               ['About parkinsons', 'Prediction', 'Recent News On PD', 'Treatment Options', 'Advices On Youtube','Inspirational Perspectives',
                                'Contact us'],
                                icons=['file-earmark-person-fill',
-                               'search', 'envelope'], default_index=0)
+                               'search','newspaper','prescription2','youtube','power','person-lines-fill'], default_index=0)
 
            # means firstly it shows index 0th code ie.,About parkinson
 
     # About parkinson page
+    
+# below code is for recent news page ----------------------------------------------
 
+    if selected == 'Recent News On PD':
+
+    def recent_news_page():
+        st.title("Recent News on Parkinson's Disease")
+
+        # Add your content for recent news here
+
+    if __name__ == '__main__':
+        recent_news_page()
+
+# below code is for treatment page ----------------------------------------------
+
+    if selected == 'Treatment Options':
+
+    def treatment_options_page():
+        st.title("Treatment Options for Parkinson's Disease")
+
+        # Add your content for treatment options here
+
+    if __name__ == '__main__':
+        treatment_options_page()
+        
+# below code is for advice page ----------------------------------------------        
+
+    if selected == 'Advices On Youtube':
+
+    def advices_youtube_page():
+        st.title("Advices on Parkinson's Disease - YouTube")
+
+        # Add your content for YouTube advices here
+
+    if __name__ == '__main__':
+        advices_youtube_page()
+        
+# below code is for inspire page ----------------------------------------------
+    
+    if selected == 'Inspirational Perspectives':
+
+    def inspirational_perspectives_page():
+        st.title("Inspirational Perspectives on Parkinson's Disease")
+
+        # Add your content for inspirational perspectives here
+
+    if __name__ == '__main__':
+        inspirational_perspectives_page()
+
+# below code is for about page ----------------------------------------------
+
+    
     if selected == 'About parkinsons':
         st.markdown("""
 <h1 style='font-family: Comic Sans MS,Courier;font-size: 25px;'>About Parkinson's Diseases</h1>
