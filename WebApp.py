@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 # loaded scaller 
-loaded_scaler = pickle.load(open('trained_scaler.pkl', 'rb'))
+#loaded_scaler = pickle.load(open('trained_scaler.pkl', 'rb'))
 
 def parkinsons_prediction(input_data):
     input_data = np.array(input_data, dtype=float)
@@ -218,6 +218,17 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 ]
 
             if any(not value for value in input_data):
+                st.error('Please provide data for all input fields.')
+            else:
+                input_data = [float(value) for value in input_data]  # Convert to floats
+                prediction_message = parkinsons_prediction(input_data)
+                if prediction_message \
+                    == "The Person does not have Parkinson's Disease":
+                    no_parkinsons_page()
+                else:
+                    st.success(prediction_message)
+            
+           """ if any(not value for value in input_data):
                 st.error("Please provide data for all input fields or upload a CSV file.")
             else:
                 input_data = [float(value) for value in input_data]
@@ -230,7 +241,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                 if prediction_message == "The Person does not have Parkinson's Disease":
                     no_parkinsons_page()
                 else:
-                    st.success(prediction_message)
+                    st.success(prediction_message) """
 
 
 def no_parkinsons_page():
