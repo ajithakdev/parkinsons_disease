@@ -312,7 +312,7 @@ def no_parkinsons_page():
     st.title("Relaxing Video for Parkinson's Patients")
 
     # Embedding a YouTube video using st.video()
-    video_link = 'https://www.youtube.com/watch?v=ZXKw-7wHiz8'
+    video_link = 'https://www.youtube.com/watch?v=recpcNfHFHs&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D'
     st.video(video_link)
     st.write("Watch this video for more encouragement and information.")
 
