@@ -397,6 +397,14 @@ def early_stage_parkinsons_page():
     </ul>
     """, unsafe_allow_html=True)
 
+
+    st.title("Relaxing Video for Parkinson's Patients")
+
+    # Embedding a YouTube video using st.video()
+    video_link = 'https://www.youtube.com/watch?v=recpcNfHFHs&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D'
+    st.video(video_link)
+    st.write("Watch this video for more encouragement and information.")
+
     st.markdown("""
     <div style='font-size: 16px; color: #0066CC; text-align: center;'>
     <b>Remember, while a Parkinson's diagnosis may bring challenges, there are many resources and strategies available to help you lead a fulfilling life and manage your condition effectively.</b>
