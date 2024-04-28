@@ -399,9 +399,16 @@ def early_stage_parkinsons_page():
     st.title("Relaxing Video for Parkinson's Patients")
 
     # Embedding a YouTube video using st.video()
-    video_link = 'https://www.youtube.com/watch?v=9MIFX0w7At8&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D'
-    st.video(video_link)
-    st.write("Watch this video for more encouragement and information.")
+    #video_link = 'https://www.youtube.com/watch?v=9MIFX0w7At8&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D'
+    #st.video(video_link)
+    #st.write("Watch this video for more encouragement and information.")
+
+        # Add a YouTube video with adjusted frame size
+    st.markdown("""
+    <div style='text-align: center;'>
+        <iframe width="640" height="360" src="https://www.youtube.com/watch?v=9MIFX0w7At8&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D" frameborder="0" allowfullscreen></iframe>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.markdown("""
     <div style='font-size: 16px; color: #0066CC; text-align: center;'>
