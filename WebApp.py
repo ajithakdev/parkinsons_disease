@@ -11,6 +11,9 @@ from sklearn.preprocessing import StandardScaler
 
 loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
+# loaded scaller 
+loaded_scaler = pickle.load(open('trained_scaler.pkl', 'rb'))
+
 
 def parkinsons_prediction(input_data):
     input_data = np.array(input_data, dtype=float)
@@ -220,6 +223,12 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
             else:
                 input_data = [float(value) for value in input_data]
                 prediction_message = parkinsons_prediction(input_data)
+                #scaler importing goes here
+                input_data = [float(value) for value in input_data]
+                input_data_reshaped = np.array(input_data).reshape(1, -1)
+                std_data = loaded_scaler.transform(input_data_reshaped)  # Use loaded scaler
+                prediction_message = parkinsons_prediction(std_data) 
+
 
                 if prediction_message == "The Person does not have Parkinson's Disease":
                     no_parkinsons_page()
