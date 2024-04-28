@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 # loaded scaller 
-loaded_scaler = pickle.load(open('trained_scaler.pkl', 'wb'))
+loaded_scaler = pickle.load(open('trained_scaler.pkl', 'rb'))
 
 def parkinsons_prediction(input_data):
     input_data = np.array(input_data, dtype=float)
