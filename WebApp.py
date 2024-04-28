@@ -69,8 +69,11 @@ def main():
     if selected == 'Project Rating':
 
         def project_rating_page():
-            st.title("Rate Our Project")
-    
+            st.title("Project Rating")
+            st.write("Rate our project:")
+            rating = st.slider("Rate from 1 to 5", 1, 5)
+            st.write(f"You rated our project: {rating}")
+        
             # Add your content for project rating here
     
         if __name__ == '__main__':
