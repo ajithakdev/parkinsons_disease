@@ -68,16 +68,32 @@ def main():
 
     if selected == 'Project Rating':
 
+
+        # Define the emoji icons and their corresponding messages
+        emojis = {
+            1: ("😞", "Sorry to hear that. We'll work on improving."),
+            2: ("😐", "Thanks for your feedback. We'll take it into account."),
+            3: ("😊", "Glad you liked it! We appreciate your support."),
+            4: ("🎉", "Awesome! We're thrilled you enjoyed it."),
+            5: ("🌟", "You're a star! Thanks for the glowing review!"),
+        }
+        
         def project_rating_page():
             st.title("Project Rating")
             st.write("Rate our project:")
             rating = st.slider("Rate from 1 to 5", 1, 5)
-            st.write(f"You rated our project: {rating}")
+            
+            # Display the selected emoji and corresponding message
+            emoji, message = emojis[rating]
+            st.write(f"You rated our project: {emoji} {rating} {emoji}")
+            st.info(message)
         
-            # Add your content for project rating here
-    
+            # Add animations or celebrations here (optional)
+            st.balloons()
+        
         if __name__ == '__main__':
             project_rating_page()
+
             
 # below code is for source_license page ----------------------------------------------
     
