@@ -118,7 +118,7 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
             """, unsafe_allow_html=True)
         
             # Contact Form Section
-            st.header("Contact Form")
+            #st.header("Contact Form")
         
             name = st.text_input('Name')
             email = st.text_input('Email')
