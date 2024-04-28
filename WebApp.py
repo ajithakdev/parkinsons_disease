@@ -309,11 +309,11 @@ def no_parkinsons_page():
     """, unsafe_allow_html=True)
 
     st.header('Encouraging Video:')
-    st.markdown("""
-        <div style='text-align: center;'>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZXKw-7wHiz8" frameborder="0" allowfullscreen></iframe>
-        </div>
-    """, unsafe_allow_html=True)
+    st.title("Relaxing Video for Parkinson's Patients")
+
+    # Embedding a YouTube video using st.video()
+    video_link = 'https://www.youtube.com/watch?v=ZXKw-7wHiz8'
+    st.video(video_link)
     st.write("Watch this video for more encouragement and information.")
 
     st.write("""
