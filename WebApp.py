@@ -79,14 +79,8 @@ def main():
 # below code is for source_license page ----------------------------------------------
     
     if selected == 'For Open Source License Contact Here':
+        st.markdown("[Click here to visit Source License Information](https://www.autmdu.in/DEPARTMENTS/CSE/index.php)")
 
-        def source_license_page():
-            st.title("Source License Information")
-    
-            # Add your content for source license here
-    
-        if __name__ == '__main__':
-            source_license_page()
         
 
 
