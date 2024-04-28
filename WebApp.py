@@ -44,13 +44,13 @@ def main():
 
     if selected == 'Recent News On PD':
 
-    def recent_news_page():
-        st.title("Recent News on Parkinson's Disease")
-
-        # Add your content for recent news here
-
-    if __name__ == '__main__':
-        recent_news_page()
+        def recent_news_page():
+            st.title("Recent News on Parkinson's Disease")
+    
+            # Add your content for recent news here
+    
+        if __name__ == '__main__':
+            recent_news_page()
 
 # below code is for treatment page ----------------------------------------------
 
