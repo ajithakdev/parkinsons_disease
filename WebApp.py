@@ -180,10 +180,11 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
         
         def animate_button():
             # Add animation effects to the submit button
-            st.button('Submit', key='submit_button', help="Submit your message", on_click=animate_button, help="Submit your message", help="Submit your message")
+            st.button('Submit', key='submit_button', on_click=animate_button)
         
         if __name__ == '__main__':
             contact_us_page()
+
 
 
 
