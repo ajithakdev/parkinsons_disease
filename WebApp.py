@@ -302,17 +302,15 @@ def no_parkinsons_page():
 
     st.header('Relaxing Quotes:')
     st.markdown("""
-        <blockquote style='font-size: 40px; text-align: center;'>
+        <blockquote style='font-size: 30px; text-align: center;'>
             "The greatest wealth is health." <br>
             <em>- Virgil</em>
         </blockquote>
     """, unsafe_allow_html=True)
 
     st.header('Encouraging Video:')
-    st.title("Relaxing Video for Parkinson's Patients")
-
     # Embedding a YouTube video using st.video()
-    video_link = 'https://www.youtube.com/watch?v=recpcNfHFHs&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D'
+    video_link = 'https://www.youtube.com/watch?v=rpcb9a3EsRA&pp=ygUUcGFya2luc29uIHByZXZlbnRpb24%3D'
     st.video(video_link)
     st.write("Watch this video for more encouragement and information.")
 
@@ -329,7 +327,7 @@ def no_parkinsons_page():
 def early_stage_parkinsons_page():
     st.title("You Have Early Stage Parkinson's Disease")
 
-    st.image('1234.png', width=200)  # Add an image for emotional connection
+    st.image('pd1.jpg', width=200)  # Add an image for emotional connection
 
     st.markdown("""
     <div style='font-size: 18px; color: #FF5733; text-align: center;'>
@@ -401,7 +399,7 @@ def early_stage_parkinsons_page():
     st.title("Relaxing Video for Parkinson's Patients")
 
     # Embedding a YouTube video using st.video()
-    video_link = 'https://www.youtube.com/watch?v=recpcNfHFHs&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D'
+    video_link = 'https://www.youtube.com/watch?v=9MIFX0w7At8&pp=ygUacGFya2luc29uIGRpc2Vhc2UgZXhlcmNpc2U%3D'
     st.video(video_link)
     st.write("Watch this video for more encouragement and information.")
 
