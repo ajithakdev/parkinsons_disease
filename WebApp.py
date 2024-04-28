@@ -56,37 +56,37 @@ def main():
 
     if selected == 'Treatment Options':
 
-    def treatment_options_page():
-        st.title("Treatment Options for Parkinson's Disease")
-
-        # Add your content for treatment options here
-
-    if __name__ == '__main__':
-        treatment_options_page()
+        def treatment_options_page():
+            st.title("Treatment Options for Parkinson's Disease")
+    
+            # Add your content for treatment options here
+    
+        if __name__ == '__main__':
+            treatment_options_page()
         
 # below code is for advice page ----------------------------------------------        
 
     if selected == 'Advices On Youtube':
 
-    def advices_youtube_page():
-        st.title("Advices on Parkinson's Disease - YouTube")
-
-        # Add your content for YouTube advices here
-
-    if __name__ == '__main__':
-        advices_youtube_page()
+        def advices_youtube_page():
+            st.title("Advices on Parkinson's Disease - YouTube")
+    
+            # Add your content for YouTube advices here
+    
+        if __name__ == '__main__':
+            advices_youtube_page()
         
 # below code is for inspire page ----------------------------------------------
     
     if selected == 'Inspirational Perspectives':
-
-    def inspirational_perspectives_page():
-        st.title("Inspirational Perspectives on Parkinson's Disease")
-
-        # Add your content for inspirational perspectives here
-
-    if __name__ == '__main__':
-        inspirational_perspectives_page()
+    
+        def inspirational_perspectives_page():
+            st.title("Inspirational Perspectives on Parkinson's Disease")
+    
+            # Add your content for inspirational perspectives here
+    
+        if __name__ == '__main__':
+            inspirational_perspectives_page()
 
 # below code is for about page ----------------------------------------------
 
