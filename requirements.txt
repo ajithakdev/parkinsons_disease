@@ -3,6 +3,8 @@ streamlit-option-menu
 scikit-learn
 pandas
 newsapi-python
+googlenews==1.5.7
+
 
 #python==3.7.12
 # Add any other required libraries here
