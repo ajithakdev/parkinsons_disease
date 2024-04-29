@@ -146,7 +146,16 @@ def main():
     
         # Introduction Section
         st.header("Introduction")
-        st.image('./images/br4.png', width=300, caption="Parkinson's Disease")
+            # Create columns for better organization
+        col1, col2 = st.columns([2, 1])
+    
+        # Add the first image in the first column
+        with col1:
+            st.image('./images/br4.png', width=300, caption="Parkinson's Disease")
+    
+        # Add the second image in the second column
+        with col2:
+        st.image('./images/brain.png', width=300, caption="Brain Structure")
         st.write("""
         Parkinson's disease is characterized by tremors, stiffness, and difficulty with movement. It affects nerve cells in the brain that produce dopamine, a crucial chemical for movement control.
         """)
