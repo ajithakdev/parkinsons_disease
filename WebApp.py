@@ -435,31 +435,31 @@ def main():
         with col1:
             MDVP_Fo_Hz = st.text_input('Enter MDVP_Fo(Hz)')
         with col2:
-            MDVP_Fhi_Hz = st.text_input('Enter MDVP:Fhi(Hz)')
+            MDVP_Fhi_Hz = st.text_input('Enter MDVP_Fhi(Hz)')
         with col3:
-            MDVP_Flo_Hz = st.text_input('Enter MDVP:Flo(Hz)')
+            MDVP_Flo_Hz = st.text_input('Enter MDVP_Flo(Hz)')
         with col4:
-            MDVP_Jitter_percent = st.text_input('Enter MDVP:Jitter(%)')
+            MDVP_Jitter_percent = st.text_input('Enter MDVP_Jitter(%)')
         with col5:
-            MDVP_Jitter_Abs = st.text_input('Enter MDVP:Jitter(Abs)')
+            MDVP_Jitter_Abs = st.text_input('Enter MDVP_Jitter(Abs)')
         with col1:
-            MDVP_RAP = st.text_input('Enter MDVP:RAP')
+            MDVP_RAP = st.text_input('Enter MDVP_RAP')
         with col2:
-            MDVP_PPQ = st.text_input('Enter MDVP:PPQ')
+            MDVP_PPQ = st.text_input('Enter MDVP_PPQ')
         with col3:
-            Jitter_DDP = st.text_input('Enter Jitter:DDP')
+            Jitter_DDP = st.text_input('Enter Jitter_DDP')
         with col4:
-            MDVP_Shimmer = st.text_input('Enter MDVP:Shimmer')
+            MDVP_Shimmer = st.text_input('Enter MDVP_Shimmer')
         with col5:
-            Shimmer_dB = st.text_input('Enter Shimmer:dB')
+            Shimmer_dB = st.text_input('Enter Shimmer_dB')
         with col1:
-            Shimmer_APQ3 = st.text_input('Enter Shimmer:APQ3')
+            Shimmer_APQ3 = st.text_input('Enter Shimmer_APQ3')
         with col2:
-            Shimmer_APQ5 = st.text_input('Enter Shimmer:APQ5')
+            Shimmer_APQ5 = st.text_input('Enter Shimmer_APQ5')
         with col3:
-            MDVP_APQ = st.text_input('Enter MDVP:APQ')
+            MDVP_APQ = st.text_input('Enter MDVP_APQ')
         with col4:
-            Shimmer_DDA = st.text_input('Enter Shimmer:DDA')
+            Shimmer_DDA = st.text_input('Enter Shimmer_DDA')
         with col5:
             NHR = st.text_input('Enter NHR')
         with col1:
