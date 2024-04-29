@@ -2,5 +2,7 @@ streamlit
 streamlit-option-menu
 scikit-learn
 pandas
+newsapi-python
+
 #python==3.7.12
 # Add any other required libraries here
