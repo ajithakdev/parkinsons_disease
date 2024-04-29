@@ -202,6 +202,11 @@ def main():
         <a href="https://www.unitywalk.org/" target="_blank">Parkinson's Unity Walk</a><br>
         </div>
         """, unsafe_allow_html=True)
+            # YouTube Video Section
+        st.header("Parkinson's Disease Explained")
+    
+        # Add a YouTube video using st.video
+        st.video("https://www.youtube.com/watch?v=833PhOsu-YE&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D")
 
 
     if selected == 'Contact us':      
