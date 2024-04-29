@@ -31,7 +31,7 @@ def parkinsons_prediction(input_data):
         return "The Person does not have Parkinson's Disease"
     else:
         return "The Person has Parkinson's"
-        #return "The Person does not have Parkinson's Disease"
+        return "The Person does not have Parkinson's Disease"
 
 
 def main():
