@@ -170,7 +170,7 @@ def main():
                 st.info(message)
         
                 # Add animations or celebrations here after submission
-                st.balloons()
+                #st.balloons()
         
         if __name__ == '__main__':
             project_rating_page()
@@ -550,7 +550,7 @@ import streamlit as st
 def no_parkinsons_page():
     st.title("Great News! You Don't Have Parkinson's Shit 😀 But ")
 
-    st.balloons()  # Celebrate the good news!
+    #st.balloons()  # Celebrate the good news!
 
     st.markdown("""
         <div style='font-size: 18px; color: green; text-align: center;'>
