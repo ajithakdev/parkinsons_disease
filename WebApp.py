@@ -461,21 +461,21 @@ def main():
         with col4:
             Shimmer_DDA = st.text_input('Enter Shimmer_DDA')
         with col5:
-            NHR = st.text_input('Enter NHR')
+            NHR = st.text_input('Enter _NHR')
         with col1:
-            HNR = st.text_input('Enter HNR')
+            HNR = st.text_input('Enter _HNR')
         with col2:
-            RPDE = st.text_input('Enter RPDE')
+            RPDE = st.text_input('Enter _RPDE')
         with col3:
-            DFA = st.text_input('Enter DFA')
+            DFA = st.text_input('Enter _DFA')
         with col4:
-            spread1 = st.text_input('Enter spread1')
+            spread1 = st.text_input('Enter _spread1')
         with col5:
-            spread2 = st.text_input('Enter spread2')
+            spread2 = st.text_input('Enter _spread2')
         with col1:
-            D2 = st.text_input('Enter D2')
+            D2 = st.text_input('Enter _D2')
         with col2:
-            PPE = st.text_input('Enter PPE')
+            PPE = st.text_input('Enter _PPE')
             
 
         st.text("Or")
