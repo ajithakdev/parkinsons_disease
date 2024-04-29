@@ -222,7 +222,7 @@ def main():
         
             # Define a list of YouTube video URLs related to Parkinson's disease
             video_urls = [
-                        "https://www.youtube.com/watch?v=2YCLRTPzJs4&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                	"https://www.youtube.com/watch?v=2YCLRTPzJs4&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
                         "https://www.youtube.com/watch?v=uzEcICmlmRI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
                         "https://www.youtube.com/watch?v=TQjjiGegEHI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
                         "https://www.youtube.com/watch?v=-0uBYZn8Ckw&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
@@ -233,7 +233,7 @@ def main():
             # Create a DataFrame with the video URLs
             videos_df = pd.DataFrame({"YouTube Video": video_urls})
         
-            # Add left and right arrow buttons to navigate videos
+            # Add arrow buttons below the video to navigate
             col1, col2, col3 = st.columns([1, 8, 1])
             with col2:
                 selected_video_index = st.session_state.get("selected_video_index", 0)
