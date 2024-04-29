@@ -253,13 +253,19 @@ def main():
     
     if selected == 'Inspirational Perspectives':
     
-        def inspirational_perspectives_page():
-            st.title("Inspirational Perspectives on Parkinson's Disease")
-    
-            # Add your content for inspirational perspectives here
-    
-        if __name__ == '__main__':
-            inspirational_perspectives_page()
+         st.title("Inspirational Stories and Patient Perspectives")
+
+         st.write("""
+            Living with Parkinson's disease can be challenging, but many individuals have found strength, resilience, and hope in their journey. Here are some inspiring stories:
+            
+            - *John's Journey:* Despite his diagnosis, John continues to pursue his passion for painting and has even held exhibitions to raise awareness about Parkinson's disease.
+            
+            - *Maria's Mission:* Maria was diagnosed with Parkinson's at a young age but has since become a vocal advocate, raising funds and awareness for research.
+            
+            - *David's Determination:* David, a former athlete, has adapted his exercise routine to manage his symptoms and continues to lead an active lifestyle.
+            
+            These stories serve as a reminder that life with Parkinson's can still be fulfilling and meaningful, and that a positive attitude and support can make a difference.
+            """)
 
 # below code is for about page ----------------------------------------------
 
