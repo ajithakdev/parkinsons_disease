@@ -9,6 +9,7 @@ from sklearn.preprocessing import StandardScaler
     #    if selected == 'Recent News On PD':
 #import streamlit as st
 from newsapi import NewsApiClient
+from googlenews import GoogleNews
         
     # Initialize News API client
 newsapi = NewsApiClient(api_key='27f8f84410134cd6b060a9ad0170a78c')  # Replace 'YOUR_API_KEY' with your actual API key
@@ -51,33 +52,30 @@ def main():
     if selected == 'Recent News On PD':
     
         def fetch_news():
-            # Fetch top headlines related to Parkinson's disease
-            headlines = newsapi.get_top_headlines(q='Neurological Disorder', language='en', country='us')
-            articles = headlines['articles'][:6]  # Limiting to 6 articles for display
+        googlenews = GoogleNews()
+        googlenews.set_lang('en')  # Set language (e.g., 'en' for English)
+        googlenews.set_period('7d')  # Set time period (e.g., '7d' for last 7 days)
+        googlenews.search('Parkinson Disease')  # Search query
     
-            return articles
+        articles = googlenews.results()[:6]  # Limiting to 6 articles for display
+        return articles
     
         def recent_news_page():
             st.title("Recent News on Parkinson's Disease")
-    
             articles = fetch_news()
-    
-            # Check if there are articles to display
+        
             if not articles:
                 st.error("No news articles found. Please try again later.")
                 return
-    
-            # Display news articles in columns
-            col1, col2, col3 = st.columns(3)
-    
+        
             for idx, article in enumerate(articles):
-                with globals()[f"col{idx % 3 + 1}"]:
-                    st.markdown(f"**{article['title']}**")
-                    st.image(article['urlToImage'], use_column_width=True)
-                    st.write(article['description'])
-                    st.write(f"Source: {article['source']['name']}")
-                    st.write(f"Published At: {article['publishedAt']}")
-    
+                st.markdown(f"**{article['title']}**")
+                st.image(article['img'], use_column_width=True)
+                st.write(article['desc'])
+                st.write(f"Source: {article['media']}")
+                st.write(f"Published At: {article['date']}")
+                st.markdown(f"**Read more:** [{article['link']}]({article['link']})")
+        
         if __name__ == '__main__':
             recent_news_page()
 
