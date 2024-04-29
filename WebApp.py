@@ -137,71 +137,63 @@ def main():
 
     
     if selected == 'About parkinsons':
+    
+        st.title("Understanding Parkinson's Disease")
+    
+        st.write("""
+        Parkinson's disease is a neurological disorder that affects movement. It typically starts with subtle symptoms and progresses over time. Understanding the key aspects of Parkinson's can help individuals and caregivers manage the condition effectively.
+        """)
+    
+        # Introduction Section
+        st.header("Introduction")
+        st.image('./images/br4.png', width=300, caption="Parkinson's Disease")
+        st.write("""
+        Parkinson's disease is characterized by tremors, stiffness, and difficulty with movement. It affects nerve cells in the brain that produce dopamine, a crucial chemical for movement control.
+        """)
+    
+        # Symptoms Section
+        st.header("Symptoms")
+        st.write("""
+        - **Tremor:** Involuntary shaking, often starting in the hands.
+        - **Bradykinesia:** Slowed movement, making tasks challenging.
+        - **Muscle Rigidity:** Stiffness and difficulty with flexibility.
+        - **Postural Instability:** Balance problems and impaired posture.
+        - **Loss of Automatic Movements:** Difficulty with unconscious actions like blinking or smiling.
+        - **Speech and Writing Changes:** Soft speech, slurred words, and small handwriting.
+        """)
+        
+        # Causes and Risk Factors Section
+        st.header("Causes and Risk Factors")
+        st.write("""
+        The exact cause of Parkinson's is unknown, but it's believed to be a combination of genetic and environmental factors. Risk factors include aging, family history, and exposure to certain toxins.
+        """)
+    
+        # Diagnosis and Treatment Section
+        st.header("Diagnosis and Treatment")
+        st.write("""
+        Early diagnosis is crucial for managing Parkinson's effectively. Doctors use a combination of medical history, physical exams, and neurological tests for diagnosis. Treatment includes medications, physical therapy, and lifestyle changes.
+        """)
+    
+        # Coping Strategies Section
+        st.header("Coping Strategies")
+        st.write("""
+        Living with Parkinson's requires a holistic approach. It's essential to stay active, eat a balanced diet, manage stress, and engage in activities that promote mental well-being. Support groups and regular check-ups are also beneficial.
+        """)
+    
+        # Conclusion and Resources
+        st.header("Conclusion and Resources")
+        st.write("""
+        While Parkinson's presents challenges, advancements in treatment and support resources offer hope and improved quality of life. Stay informed, seek professional guidance, and connect with community resources for comprehensive care.
+        """)
         st.markdown("""
-<h1 style='font-family: Comic Sans MS,Courier;font-size: 25px;'>About Parkinson's Diseases</h1>
-""",
-                    unsafe_allow_html=True)
+        <div style='font-size: 16px; color: #007bff; text-align: center;'>
+        <b>For more information, visit:</b><br>
+        <a href="https://www.parkinson.org/" target="_blank">Parkinson's Foundation</a><br>
+        <a href="https://www.michaeljfox.org/" target="_blank">Michael J. Fox Foundation</a><br>
+        <a href="https://www.unitywalk.org/" target="_blank">Parkinson's Unity Walk</a><br>
+        </div>
+        """, unsafe_allow_html=True)
 
-       # Display the paragraph and image side by side
-       # Create two columns
-
-        (col1, col2) = st.columns([3, 1])
-
-# Add content to the columns
-
-        with col1:
-
-            # Add the paragraph with custom font name and font size
-
-            st.write("""
-<p style='font-family: Comic Sans MS,Courier; font-size: 16px;'>
-Parkinson's disease is a progressive disorder that affects the nervous system and the parts of the body controlled by the nerves. Symptoms start slowly. The first symptom may be a barely noticeable tremor in just one hand. Tremors are common, but the disorder also may cause stiffness or slowing of movement.
-In the early stages of Parkinson's disease, your face may show little or no expression. Your arms may not swing when you walk. Your speech may become soft or slurred. Parkinson's disease symptoms worsen as your condition progresses over time.
-Although Parkinson's disease can't be cured, medicines might significantly improve your symptoms. Occasionally, a health care professional may suggest surgery to regulate certain regions of your brain and improve your symptoms.
-</p>
-""",
-                     unsafe_allow_html=True)
-
-        with col2:
-            st.image('./images/br4.png',
-                     width=360)
-
-        st.markdown("""
-<div style='font-family: Comic Sans MS, Courier; font-size: 16px;'>
-<b style='font-size: 24px;'>Symptoms</b>
-
-- **Tremor:** Rhythmic shaking, called tremor, usually begins in a limb, often your hand or fingers. You may rub your thumb and forefinger back and forth. This is known as a pill-rolling tremor. Your hand may tremble when it's at rest. The shaking may decrease when you are performing tasks.
-
-- **Slowed movement (bradykinesia):** Over time, Parkinson's disease may slow your movement, making simple tasks difficult and time-consuming. Your steps may become shorter when you walk. It may be difficult to get out of a chair. You may drag or shuffle your feet as you try to walk.
-
-- **Rigid muscles:** Muscle stiffness may occur in any part of your body. The stiff muscles can be painful and limit your range of motion.
-
-- **Impaired posture and balance:** Your posture may become stooped. Or you may fall or have balance problems as a result of Parkinson's disease.
-
-- **Loss of automatic movements:** You may have a decreased ability to perform unconscious movements, including blinking, smiling, or swinging your arms when you walk.
-
-- **Speech changes:** You may speak softly or quickly, slur, or hesitate before talking. Your speech may be more of a monotone rather than have the usual speech patterns.
-
-- **Writing changes:** It may become hard to write, and your writing may appear small.
-
-
-<b style='font-size: 24px;'>When to see a doctor:</b><br>
-See a health care professional if you have any of the symptoms associated with Parkinson's disease \xe2\x80\x94 not only to diagnose your condition but also to rule out other causes for your symptoms.
-</div>
-""",
-                    unsafe_allow_html=True)
-
-        st.markdown("""
-  <div style='font-family: Comic Sans MS, Courier; font-size: 16px;'>
-  <b style='font-size: 24px;'>Prevention</b><br>
-There are no proven ways to prevent the disease.
-
-Some research has shown that regular aerobic exercise might reduce the risk of Parkinson's disease.
-
-Some other research has shown that people who consume caffeine \xe2\x80\x94 which is found in coffee, tea and cola \xe2\x80\x94 get Parkinson's disease less often than those who don't drink it. Green tea also is related to a reduced risk of developing Parkinson's disease. However, it is still not known whether caffeine protects against getting Parkinson's or is related in some other way. Currently there is not enough evidence to suggest that drinking caffeinated beverages protects against Parkinson's.
-  </div>
-  """,
-                    unsafe_allow_html=True)
 
     if selected == 'Contact us':      
         def contact_us_page():
