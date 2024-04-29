@@ -52,7 +52,7 @@ def main():
     
         def fetch_news():
             # Fetch top headlines related to Parkinson's disease
-            headlines = newsapi.get_top_headlines(q='Parkinson disease', language='en', country='us')
+            headlines = newsapi.get_top_headlines(q='Neurological Disorder', language='en', country='us')
             articles = headlines['articles'][:6]  # Limiting to 6 articles for display
     
             return articles
