@@ -222,19 +222,26 @@ def main():
         
             # Define a list of YouTube video URLs related to Parkinson's disease
             video_urls = [
-                "https://www.youtube.com/watch?v=2YCLRTPzJs4&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                "https://www.youtube.com/watch?v=uzEcICmlmRI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                "https://www.youtube.com/watch?v=TQjjiGegEHI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                "https://www.youtube.com/watch?v=-0uBYZn8Ckw&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                "https://www.youtube.com/watch?v=qXCdPBFHp5A&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"
+                        "https://www.youtube.com/watch?v=2YCLRTPzJs4&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                        "https://www.youtube.com/watch?v=uzEcICmlmRI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                        "https://www.youtube.com/watch?v=TQjjiGegEHI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                        "https://www.youtube.com/watch?v=-0uBYZn8Ckw&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                        "https://www.youtube.com/watch?v=qXCdPBFHp5A&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"
                 # Add more video URLs as needed
             ]
         
             # Create a DataFrame with the video URLs
             videos_df = pd.DataFrame({"YouTube Video": video_urls})
         
-            # Use a slider to select the video index
-            selected_video_index = st.slider("Select a video", 0, len(video_urls) - 1)
+            # Add left and right arrow buttons to navigate videos
+            col1, col2, col3 = st.columns([1, 8, 1])
+            with col2:
+                selected_video_index = st.session_state.get("selected_video_index", 0)
+                if st.button("◄"):
+                    selected_video_index = max(0, selected_video_index - 1)
+                if st.button("►"):
+                    selected_video_index = min(len(video_urls) - 1, selected_video_index + 1)
+                st.session_state["selected_video_index"] = selected_video_index
         
             # Display the selected video using the st_player component
             st_player(videos_df.iloc[selected_video_index, 0])
