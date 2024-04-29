@@ -433,7 +433,7 @@ def main():
         (col1, col2, col3, col4, col5) = st.columns(5)
 
         with col1:
-            MDVP_Fo_Hz = st.text_input('Enter MDVP:Fo(Hz)11')
+            MDVP_Fo_Hz = st.text_input('Enter MDVP_Fo(Hz)')
         with col2:
             MDVP_Fhi_Hz = st.text_input('Enter MDVP:Fhi(Hz)')
         with col3:
