@@ -3,7 +3,7 @@ streamlit-option-menu
 scikit-learn
 pandas
 newsapi-python
-googlenews==1.5.7
+googlenews
 
 
 #python==3.7.12
