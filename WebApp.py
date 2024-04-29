@@ -7,7 +7,7 @@ import pandas as pd
 from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
     #    if selected == 'Recent News On PD':
-import streamlit as st
+#import streamlit as st
 from newsapi import NewsApiClient
         
     # Initialize News API client
