@@ -42,12 +42,12 @@ def main():
     
 # below code is for recent news page ----------------------------------------------
 
-#    if selected == 'Recent News On PD':
-import streamlit as st
-from newsapi import NewsApiClient
-    
-# Initialize News API client
-newsapi = NewsApiClient(api_key='27f8f84410134cd6b060a9ad0170a78c')  # Replace 'YOUR_API_KEY' with your actual API key
+    #    if selected == 'Recent News On PD':
+    import streamlit as st
+    from newsapi import NewsApiClient
+        
+    # Initialize News API client
+    newsapi = NewsApiClient(api_key='27f8f84410134cd6b060a9ad0170a78c')  # Replace 'YOUR_API_KEY' with your actual API key
     
     if selected == 'Recent News On PD':
     
