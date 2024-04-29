@@ -52,12 +52,12 @@ def main():
     if selected == 'Recent News On PD':
     
         def fetch_news():
-        googlenews = GoogleNews()
-        googlenews.set_lang('en')  # Set language (e.g., 'en' for English)
-        googlenews.set_period('7d')  # Set time period (e.g., '7d' for last 7 days)
-        googlenews.search('Parkinson Disease')  # Search query
-    
-        articles = googlenews.results()[:6]  # Limiting to 6 articles for display
+            googlenews = GoogleNews()
+            googlenews.set_lang('en')  # Set language (e.g., 'en' for English)
+            googlenews.set_period('7d')  # Set time period (e.g., '7d' for last 7 days)
+            googlenews.search('Parkinson Disease')  # Search query
+        
+            articles = googlenews.results()[:6]  # Limiting to 6 articles for display
         return articles
     
         def recent_news_page():
