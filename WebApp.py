@@ -179,7 +179,34 @@ def main():
 # below code is for source_license page ----------------------------------------------
     
     if selected == 'For Open Source License Contact Here':
-        st.markdown("[Click here to visit Source License Information](https://www.autmdu.in/DEPARTMENTS/CSE/index.php)")
+        def open_source_license_page():
+            st.title("Open Source License Information")
+            
+            st.markdown("""
+            Open source projects are powered by collaboration and community contributions. They embody the spirit of sharing, innovation, and accessibility. At [Your Website], we deeply appreciate and support open source initiatives.
+            """)
+            
+            st.markdown("""
+            We believe in the principles of open source software, which include:
+            - Transparency
+            - Collaboration
+            - Accessibility
+            - Flexibility
+            - Continuous improvement
+            """)
+            
+            st.markdown("""
+            Open source licenses play a crucial role in defining how software can be used, modified, and distributed. They provide legal frameworks that protect both developers and users.
+            """)
+        
+            st.markdown("""
+            If you'd like to learn more about open source licenses and their importance, you can [click here to visit Source License Information](https://www.autmdu.in/DEPARTMENTS/CSE/details.php?id=8).
+            """)
+        
+            st.success("Explore the world of open source and contribute to meaningful projects!")
+        
+        if __name__ == '__main__':
+            open_source_license_page()
 
         
 
