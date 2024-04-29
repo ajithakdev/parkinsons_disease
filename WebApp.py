@@ -7,6 +7,7 @@ import pandas as pd
 from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from newsapi import NewsApiClient
+from streamlit_player import st_player
 #from googlenews import GoogleNews
         
 # Initialize News API client
@@ -218,9 +219,26 @@ def main():
 
         def advices_youtube_page():
             st.title("Advices on Parkinson's Disease - YouTube")
-    
-            # Add your content for YouTube advices here
-    
+        
+            # Define a list of YouTube video URLs related to Parkinson's disease
+            video_urls = [
+                "https://www.youtube.com/watch?v=2YCLRTPzJs4&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                "https://www.youtube.com/watch?v=uzEcICmlmRI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                "https://www.youtube.com/watch?v=TQjjiGegEHI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                "https://www.youtube.com/watch?v=-0uBYZn8Ckw&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
+                "https://www.youtube.com/watch?v=qXCdPBFHp5A&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"
+                # Add more video URLs as needed
+            ]
+        
+            # Create a DataFrame with the video URLs
+            videos_df = pd.DataFrame({"YouTube Video": video_urls})
+        
+            # Use a slider to select the video index
+            selected_video_index = st.slider("Select a video", 0, len(video_urls) - 1)
+        
+            # Display the selected video using the st_player component
+            st_player(videos_df.iloc[selected_video_index, 0])
+        
         if __name__ == '__main__':
             advices_youtube_page()
         
