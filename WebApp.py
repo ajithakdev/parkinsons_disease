@@ -72,9 +72,9 @@ def main():
     with st.sidebar:
         selected = option_menu('Parkinsons Disease Prediction',
                                ['About parkinsons', 'Prediction', 'Recent News On PD', 'Treatment Options', 'Advices On Youtube','Inspirational Perspectives',
-                               'Contact us','Project Rating','For Open Source License Contact Here'],
+                               'Contact us','Project Rating','For Open Source License Contact Here', 'Translation'],
                                icons=['file-earmark-person-fill',
-                               'search','newspaper','prescription2','youtube','power','person-lines-fill','stars','sourceforge'], default_index=0)
+                               'search','newspaper','prescription2','youtube','power','person-lines-fill','stars','sourceforge','translate'], default_index=0)
 
            # means firstly it shows index 0th code ie.,About parkinson
 
