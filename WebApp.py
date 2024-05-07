@@ -372,53 +372,7 @@ def main():
                         st.error("Error submitting form. Please try again later.")
                     animate_button()
         
-            # Direct Contact Information Section
-            st.header("Direct Contact Information")
-        
-            st.markdown("""
-            <div style='font-size: 16px; color: #555555;'>
-            If you prefer to contact us directly, here is our contact information:
-            </div>
-            """, unsafe_allow_html=True)
-        
-            # Use columns for better organization
-            col1, col2 = st.columns(2)
-        
-            with col1:
-                st.markdown("""
-                <div style='font-size: 16px; color: #007bff;'>
-                <b>Email:</b> contact@example.com
-                </div>
-                """, unsafe_allow_html=True)
-        
-                st.markdown("""
-                <div style='font-size: 16px; color: #007bff;'>
-                <b>Phone:</b> +1 (123) 456-7890
-                </div>
-                """, unsafe_allow_html=True)
-        
-                st.markdown("""
-                <div style='font-size: 16px; color: #007bff;'>
-                <b>Social Media:</b>
-                </div>
-                """, unsafe_allow_html=True)
-                st.markdown("""
-                <div style='font-size: 16px; color: #007bff;'>
-                <b>Facebook:</b> <a href="https://www.facebook.com/" target="_blank">Facebook Page</a>
-                </div>
-                """, unsafe_allow_html=True)
-                st.markdown("""
-                <div style='font-size: 16px; color: #007bff;'>
-                <b>Twitter:</b> <a href="https://twitter.com/" target="_blank">Twitter Page</a>
-                </div>
-                """, unsafe_allow_html=True)
-                
-            with col2:
-                st.markdown("""
-                <div style='font-size: 16px; color: #007bff;'>
-                <b>Address:</b> 123 Street, City, Country
-                </div>
-                """, unsafe_allow_html=True)
+            
         
         def animate_button():
             # Add animation effects to the submit button
