@@ -8,10 +8,7 @@ from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from newsapi import NewsApiClient
 from streamlit_player import st_player
-#import requests
-import plotly.express as px
 #from googlenews import GoogleNews
-
         
 # Initialize News API client
 newsapi = NewsApiClient(api_key='27f8f84410134cd6b060a9ad0170a78c')  # Replace 'YOUR_API_KEY' with your actual API key
@@ -41,20 +38,13 @@ def main():
     with st.sidebar:
         selected = option_menu('Parkinsons Disease Prediction',
                                ['About parkinsons', 'Prediction', 'Recent News On PD', 'Treatment Options', 'Advices On Youtube','Inspirational Perspectives',
-                               'Contact us','Project Rating','For Open Source License Contact Here', 'Translation'],
+                               'Contact us','Project Rating','For Open Source License Contact Here'],
                                icons=['file-earmark-person-fill',
-                               'search','newspaper','prescription2','youtube','power','person-lines-fill','stars','sourceforge','translate'], default_index=0)
+                               'search','newspaper','prescription2','youtube','power','person-lines-fill','stars','sourceforge'], default_index=0)
 
            # means firstly it shows index 0th code ie.,About parkinson
 
-# data visualization code below here 
-
-        def visualize_data(df):
-          fig = px.scatter(df, x="MDVP:Fo(Hz)", y="MDVP:Fhi(Hz)", color="status", 
-                           title="Relationship between MDVP:Fo(Hz) and MDVP:Fhi(Hz)")
-          return fig
-
-# About parkinson page
+    # About parkinson page
     
 # below code is for recent news page ----------------------------------------------
 
@@ -486,31 +476,7 @@ def main():
             D2 = st.text_input('Enter_D2')
         with col2:
             PPE = st.text_input('Enter_PPE')
-        # Create DataFrame from input data
-        df = pd.DataFrame([input_data], columns=[
-                    MDVP_Fo_Hz,
-                    MDVP_Fhi_Hz,
-                    MDVP_Flo_Hz,
-                    MDVP_Jitter_percent,
-                    MDVP_Jitter_Abs,
-                    MDVP_RAP,
-                    MDVP_PPQ,
-                    Jitter_DDP,
-                    MDVP_Shimmer,
-                    Shimmer_dB,
-                    Shimmer_APQ3,
-                    Shimmer_APQ5,
-                    MDVP_APQ,
-                    Shimmer_DDA,
-                    NHR,
-                    HNR,
-                    RPDE,
-                    DFA,
-                    spread1,
-                    spread2,
-                    D2,
-                    PPE,
-            ])    
+            
 
         st.text("Or")
         uploaded_file = st.file_uploader('File Uploader...')  # Single file uploader 
@@ -555,14 +521,12 @@ def main():
             else:
                 input_data = [float(value) for value in input_data]  # Convert to floats
                 prediction_message = parkinsons_prediction(input_data)
-                st.plotly_chart(visualize_data(df))
                 if prediction_message \
                     == "The Person has Parkinson's":
                     early_stage_parkinsons_page()
                 else:
                     #st.success(prediction_message)
                     no_parkinsons_page()
-                
             
  #          if any(not value for value in input_data):
   #              st.error("Please provide data for all input fields or upload a CSV file.")
