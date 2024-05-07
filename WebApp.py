@@ -38,6 +38,26 @@ elif language == 'Italian':
     st.write('Ciao, Mondo!')
     
 st.write('<button>Language</button>', unsafe_allow_html=True)
+# Translate the entire page into the selected language
+if st.button('Translate'):
+    selected_language = languages[language]
+    text_to_translate = st.session_state.get('text_to_translate', '')
+    response = requests.post(
+        'https://translation.googleapis.com/language/translate/v2',
+        headers={'Content-Type': 'application/json'},
+        data={
+            'key': 'YOUR_GOOGLE_TRANSLATE_API_KEY',
+            'q': text_to_translate,
+            'target': selected_language
+        }
+    )
+    translated_text = response.json()['data']['translations'][0]['translatedText']
+    st.write(translated_text)
+
+# Use the translated text to update the page
+if st.button('Update'):
+    st.session_state['text_to_translate'] = translated_text
+    st.write(translated_text)
         
 # Initialize News API client
 newsapi = NewsApiClient(api_key='27f8f84410134cd6b060a9ad0170a78c')  # Replace 'YOUR_API_KEY' with your actual API key
