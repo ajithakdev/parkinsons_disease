@@ -6,7 +6,8 @@ newsapi-python
 googlenews
 streamlit-player
 requests
-
+plotly.express
+plotly
 
 
 #python==3.7.12
