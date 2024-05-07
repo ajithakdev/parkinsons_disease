@@ -5,8 +5,7 @@ pandas
 newsapi-python
 googlenews
 streamlit-player
-folium
-streamlit_folium
+requests
 
 
 
