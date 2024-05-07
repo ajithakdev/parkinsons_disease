@@ -9,6 +9,7 @@ from sklearn.preprocessing import StandardScaler
 from newsapi import NewsApiClient
 from streamlit_player import st_player
 import requests
+import plotly.express as px
 #from googlenews import GoogleNews
 
 # Define a dictionary of languages and their corresponding codes
