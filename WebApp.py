@@ -555,13 +555,14 @@ def main():
             else:
                 input_data = [float(value) for value in input_data]  # Convert to floats
                 prediction_message = parkinsons_prediction(input_data)
+                st.plotly_chart(visualize_data(df))
                 if prediction_message \
                     == "The Person has Parkinson's":
                     early_stage_parkinsons_page()
                 else:
                     #st.success(prediction_message)
                     no_parkinsons_page()
-                st.plotly_chart(visualize_data(df))
+                
             
  #          if any(not value for value in input_data):
   #              st.error("Please provide data for all input fields or upload a CSV file.")
