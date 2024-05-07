@@ -537,6 +537,7 @@ def main():
                 else:
                     #st.success(prediction_message)
                     no_parkinsons_page()
+                st.plotly_chart(visualize_data(df))
             
  #          if any(not value for value in input_data):
   #              st.error("Please provide data for all input fields or upload a CSV file.")
@@ -632,7 +633,6 @@ def no_parkinsons_page():
 
 # Below code is for if Parkinson result 
 def early_stage_parkinsons_page():
-    st.plotly_chart(visualize_data(df))
     st.title("You Have Early Stage Parkinson's Disease")
 
     st.image('pd1.jpg', width=800)  # Add an image for emotional connection
