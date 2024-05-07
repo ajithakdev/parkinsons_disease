@@ -8,42 +8,10 @@ from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from newsapi import NewsApiClient
 from streamlit_player import st_player
-import requests
+#import requests
 import plotly.express as px
 #from googlenews import GoogleNews
 
-# Define a dictionary of languages and their corresponding codes
-languages = {
-    'English': 'en',
-    'Spanish': 'es',
-    'French': 'fr',
-    'German': 'de',
-    'Italian': 'it',
-    # Add more languages as needed
-}
-
-# Create a dropdown list of languages
-source_language = st.selectbox('Select Source Language', list(languages.keys()))
-target_language = st.selectbox('Select Target Language', list(languages.keys()))
-
-# Get the text to be translated
-text_to_translate = st.text_area('Enter the text to be translated')
-
-# Translate the text using the LibreTranslate API
-if st.button('Translate'):
-    source_code = languages[source_language]
-    target_code = languages[target_language]
-    url = f'https://libretranslate.de/translate'
-    data = {
-        'q': text_to_translate,
-        'source': source_code,
-        'target': target_code,
-        'format': 'text',
-    }
-    response = requests.post(url, data=data)
-    translated_text = response.json()['translatedText']
-    st.write(f'Translated text ({target_language}):')
-    st.write(translated_text)
         
 # Initialize News API client
 newsapi = NewsApiClient(api_key='27f8f84410134cd6b060a9ad0170a78c')  # Replace 'YOUR_API_KEY' with your actual API key
