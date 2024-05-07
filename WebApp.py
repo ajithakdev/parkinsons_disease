@@ -362,6 +362,7 @@ def main():
                 submitted = st.button('Submit')
                 
                 if submitted:
+                import requests
                     url = "https://formspree.io/f/mkndyaaw"
                     data = {"name": name, "email": email, "message": message}
                     response = requests.post(url, data=data)
