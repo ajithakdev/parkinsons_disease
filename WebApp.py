@@ -4,6 +4,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import pandas as pd
+import requests
 from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from newsapi import NewsApiClient
@@ -362,7 +363,6 @@ def main():
                 submitted = st.button('Submit')
                 
                 if submitted:
-                import requests
                     url = "https://formspree.io/f/mkndyaaw"
                     data = {"name": name, "email": email, "message": message}
                     response = requests.post(url, data=data)
