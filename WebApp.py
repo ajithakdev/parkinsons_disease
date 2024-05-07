@@ -181,30 +181,21 @@ def main():
     
     if selected == 'For Open Source License Contact Here':
         def open_source_license_page():
-            st.title("Open Source License Information")
-            
-            st.markdown("""
-            Open source projects are powered by collaboration and community contributions. They embody the spirit of sharing, innovation, and accessibility. At [Your Website], we deeply appreciate and support open source initiatives.
-            """)
-            
-            st.markdown("""
-            We believe in the principles of open source software, which include:
-            - Transparency
-            - Collaboration
-            - Accessibility
-            - Flexibility
-            - Continuous improvement
-            """)
-            
-            st.markdown("""
-            Open source licenses play a crucial role in defining how software can be used, modified, and distributed. They provide legal frameworks that protect both developers and users.
+            st.title("👐 Open Source & Collaboration 👐")
+        
+            st.write("""
+            This project embraces the spirit of open source! We believe in:
+            * **Transparency:** Openly sharing our code and process.
+            * **Collaboration:** Working together to create something better. 
+            * **Innovation:** Building on each other's ideas to drive progress.
             """)
         
-            st.markdown("""
-            If you'd like to learn more about open source licenses and their importance, you can [click here to visit Source License Information](https://www.autmdu.in/DEPARTMENTS/CSE/details.php?id=8).
+            st.info("""
+            Want to know more about open source licenses? 
+            Reach out to [Mr.KR.Karthick](https://www.autmdu.in/DEPARTMENTS/CSE/details.php?id=8) for details. 
             """)
         
-            st.success("Explore the world of open source and contribute to meaningful projects!")
+            st.success("Let's build amazing things together! 🚀")
         
         if __name__ == '__main__':
             open_source_license_page()
