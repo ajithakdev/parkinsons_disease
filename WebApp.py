@@ -146,32 +146,31 @@ def main():
 
     if selected == 'Project Rating':
 
-
-
-        
-        # Define the emoji icons and their corresponding messages
-        emojis = {
-            1: ("😞", "Sorry to hear that. We'll work on improving."),
-            2: ("😐", "Thanks for your feedback. We'll take it into account."),
-            3: ("😊", "Glad you liked it! We appreciate your support."),
-            4: ("🎉", "Awesome! We're thrilled you enjoyed it."),
-            5: ("🌟", "You're a star! Thanks for the glowing review!"),
-        }
-        
         def project_rating_page():
-            st.title("Project Rating")
-            st.write("Rate our project:")
-            rating = st.slider("Rate from 1 to 5", 1, 5)
-            submitted = st.button("Submit Rating")
-            
-            if submitted:
-                # Display the selected emoji and corresponding message after submission
-                emoji, message = emojis[rating]
-                st.write(f"You rated our project: {emoji} {rating} {emoji}")
-                st.info(message)
+            st.title("✨ Rate Our Project! ✨")
         
-                # Add animations or celebrations here after submission
-                #st.balloons()
+            rating = st.slider("How would you rate your experience? (1 - Not satisfied, 5 - Very satisfied)", 1, 5, value=3)
+        
+            if st.button("Submit Rating"):
+                if rating == 1:
+                    st.write("😞 Oh no! We're sorry to hear that. We'll work hard to improve!")
+                    st.image("https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif", width=200)  # Add a relevant GIF
+                elif rating == 2:
+                    st.write("😐 We appreciate your feedback. We'll definitely take it into account!")
+                    st.image("https://media.giphy.com/media/26gJz4B3m6LVi4w1e/giphy.gif", width=200)  # Add a relevant GIF
+                elif rating == 3:
+                    st.write("😊 Glad you liked it! Thank you for your support!")
+                    st.image("https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif", width=200)  # Add a relevant GIF
+                elif rating == 4:
+                    st.write("🎉 Awesome! We're thrilled you enjoyed it!")
+                    st.image("https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif", width=200)  # Add a relevant GIF
+                elif rating == 5:
+                    st.write("🌟 You're a star! Thanks for the amazing review! 🌟")
+                    #st.balloons()  # Celebrate with balloons!
+        
+                # Store rating in session state or a database for later analysis
+        
+            st.write("Your feedback helps us make our project even better. Thank you! 😊")
         
         if __name__ == '__main__':
             project_rating_page()
