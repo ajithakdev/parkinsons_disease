@@ -79,7 +79,14 @@ def main():
 
            # means firstly it shows index 0th code ie.,About parkinson
 
-    # About parkinson page
+# data visualization code below here 
+
+def visualize_data(df):
+  fig = px.scatter(df, x="MDVP:Fo(Hz)", y="MDVP:Fhi(Hz)", color="status", 
+                   title="Relationship between MDVP:Fo(Hz) and MDVP:Fhi(Hz)")
+  return fig
+
+# About parkinson page
     
 # below code is for recent news page ----------------------------------------------
 
@@ -657,6 +664,7 @@ def no_parkinsons_page():
 
 # Below code is for if Parkinson result 
 def early_stage_parkinsons_page():
+    st.plotly_chart(visualize_data(df))
     st.title("You Have Early Stage Parkinson's Disease")
 
     st.image('pd1.jpg', width=800)  # Add an image for emotional connection
