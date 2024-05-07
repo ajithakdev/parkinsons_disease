@@ -8,7 +8,34 @@ from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from newsapi import NewsApiClient
 from streamlit_player import st_player
+from streamlit_folium import st_folium
+import folium
 #from googlenews import GoogleNews
+
+# Define a dictionary of languages and their corresponding translations
+languages = {
+    'English': 'en',
+    'Spanish': 'es',
+    'French': 'fr',
+    'German': 'de',
+    'Italian': 'it',
+    # Add more languages as needed
+}
+
+# Create a dropdown list of languages
+language = st.selectbox('Select Language', list(languages.keys()))
+
+# Use the selected language to translate the text on the page
+if language == 'English':
+    st.write('Hello, World!')
+elif language == 'Spanish':
+    st.write('Hola, Mundo!')
+elif language == 'French':
+    st.write('Bonjour, Monde!')
+elif language == 'German':
+    st.write('Hallo, Welt!')
+elif language == 'Italian':
+    st.write('Ciao, Mondo!')
         
 # Initialize News API client
 newsapi = NewsApiClient(api_key='27f8f84410134cd6b060a9ad0170a78c')  # Replace 'YOUR_API_KEY' with your actual API key
