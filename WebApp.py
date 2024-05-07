@@ -486,7 +486,31 @@ def main():
             D2 = st.text_input('Enter_D2')
         with col2:
             PPE = st.text_input('Enter_PPE')
-            
+        # Create DataFrame from input data
+        df = pd.DataFrame([input_data], columns=[
+                    MDVP_Fo_Hz,
+                    MDVP_Fhi_Hz,
+                    MDVP_Flo_Hz,
+                    MDVP_Jitter_percent,
+                    MDVP_Jitter_Abs,
+                    MDVP_RAP,
+                    MDVP_PPQ,
+                    Jitter_DDP,
+                    MDVP_Shimmer,
+                    Shimmer_dB,
+                    Shimmer_APQ3,
+                    Shimmer_APQ5,
+                    MDVP_APQ,
+                    Shimmer_DDA,
+                    NHR,
+                    HNR,
+                    RPDE,
+                    DFA,
+                    spread1,
+                    spread2,
+                    D2,
+                    PPE,
+            ])    
 
         st.text("Or")
         uploaded_file = st.file_uploader('File Uploader...')  # Single file uploader 
