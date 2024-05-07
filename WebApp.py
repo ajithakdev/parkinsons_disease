@@ -8,11 +8,10 @@ from streamlit_option_menu import option_menu
 from sklearn.preprocessing import StandardScaler
 from newsapi import NewsApiClient
 from streamlit_player import st_player
-from streamlit_folium import st_folium
-import folium
+import requests
 #from googlenews import GoogleNews
 
-# Define a dictionary of languages and their corresponding translations
+# Define a dictionary of languages and their corresponding codes
 languages = {
     'English': 'en',
     'Spanish': 'es',
@@ -23,40 +22,26 @@ languages = {
 }
 
 # Create a dropdown list of languages
-language = st.selectbox('Select Language', list(languages.keys()))
+source_language = st.selectbox('Select Source Language', list(languages.keys()))
+target_language = st.selectbox('Select Target Language', list(languages.keys()))
 
-# Use the selected language to translate the text on the page
-if language == 'English':
-    st.write('Hello, World!')
-elif language == 'Spanish':
-    st.write('Hola, Mundo!')
-elif language == 'French':
-    st.write('Bonjour, Monde!')
-elif language == 'German':
-    st.write('Hallo, Welt!')
-elif language == 'Italian':
-    st.write('Ciao, Mondo!')
-    
-st.write('<button>Language</button>', unsafe_allow_html=True)
-# Translate the entire page into the selected language
+# Get the text to be translated
+text_to_translate = st.text_area('Enter the text to be translated')
+
+# Translate the text using the LibreTranslate API
 if st.button('Translate'):
-    selected_language = languages[language]
-    text_to_translate = st.session_state.get('text_to_translate', '')
-    response = requests.post(
-        'https://translation.googleapis.com/language/translate/v2',
-        headers={'Content-Type': 'application/json'},
-        data={
-            'key': 'YOUR_GOOGLE_TRANSLATE_API_KEY',
-            'q': text_to_translate,
-            'target': selected_language
-        }
-    )
-    translated_text = response.json()['data']['translations'][0]['translatedText']
-    st.write(translated_text)
-
-# Use the translated text to update the page
-if st.button('Update'):
-    st.session_state['text_to_translate'] = translated_text
+    source_code = languages[source_language]
+    target_code = languages[target_language]
+    url = f'https://libretranslate.de/translate'
+    data = {
+        'q': text_to_translate,
+        'source': source_code,
+        'target': target_code,
+        'format': 'text',
+    }
+    response = requests.post(url, data=data)
+    translated_text = response.json()['translatedText']
+    st.write(f'Translated text ({target_language}):')
     st.write(translated_text)
         
 # Initialize News API client
