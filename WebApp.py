@@ -49,10 +49,10 @@ def main():
 
 # data visualization code below here 
 
-def visualize_data(df):
-  fig = px.scatter(df, x="MDVP:Fo(Hz)", y="MDVP:Fhi(Hz)", color="status", 
-                   title="Relationship between MDVP:Fo(Hz) and MDVP:Fhi(Hz)")
-  return fig
+        def visualize_data(df):
+          fig = px.scatter(df, x="MDVP:Fo(Hz)", y="MDVP:Fhi(Hz)", color="status", 
+                           title="Relationship between MDVP:Fo(Hz) and MDVP:Fhi(Hz)")
+          return fig
 
 # About parkinson page
     
