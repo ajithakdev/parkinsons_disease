@@ -362,8 +362,13 @@ def main():
                 submitted = st.button('Submit')
                 
                 if submitted:
-                    # Process the contact information (e.g., send an email, store in a database, etc.)
-                    st.success('Thank you for your message! We will get back to you soon.')
+                    url = "https://formspree.io/f/mkndyaaw"
+                    data = {"name": name, "email": email, "message": message}
+                    response = requests.post(url, data=data)
+                    if response.status_code == 200:
+                        st.success('Thank you for your message! We will get back to you soon.')
+                    else:
+                        st.error("Error submitting form. Please try again later.")
                     animate_button()
         
             # Direct Contact Information Section
