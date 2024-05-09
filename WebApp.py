@@ -337,7 +337,7 @@ def main():
     if selected == 'Contact us':      
         def contact_us_page():
             st.markdown("""
-            <h1 style='font-family: Arial, sans-serif; font-size: 36px; color: #FFFFFF; text-align: center;'>Contact Us</h1>
+            <h1 style='font-family: Arial, sans-serif; font-size: 36px; color: #8B0000; text-align: center;'>Contact Us</h1>
             <p style='font-size: 18px; color: #555555; text-align: center;'>We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
             """, unsafe_allow_html=True)
         
