@@ -1,4 +1,4 @@
-# Trial Project: Parkinson's Disease Detection
+# Parkinson's Disease Detection
 
 >> **Project Title:** Parkinson's Disease Early Prediction and Guidance Using Machine Learning
 
