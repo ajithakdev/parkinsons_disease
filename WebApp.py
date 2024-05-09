@@ -210,32 +210,32 @@ def main():
 
         def advices_youtube_page():
             st.title("Advices on Parkinson's Disease - YouTube")
-        
+            
             # Define a list of YouTube video URLs related to Parkinson's disease
-            video_urls = [
-                	"https://www.youtube.com/watch?v=2YCLRTPzJs4&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                        "https://www.youtube.com/watch?v=uzEcICmlmRI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                        "https://www.youtube.com/watch?v=TQjjiGegEHI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                        "https://www.youtube.com/watch?v=-0uBYZn8Ckw&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D",
-                        "https://www.youtube.com/watch?v=qXCdPBFHp5A&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"
-                # Add more video URLs as needed
+            video_data = [
+                {"title": "Understanding Parkinson's Disease", "url": "https://www.youtube.com/watch?v=2YCLRTPzJs4&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"},
+                {"title": "Parkinson's Disease Treatment Options", "url": "https://www.youtube.com/watch?v=uzEcICmlmRI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"},
+                {"title": "Living Well with Parkinson's", "url": "https://www.youtube.com/watch?v=TQjjiGegEHI&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"},
+                {"title": "Exercise for Parkinson's Patients", "url": "https://www.youtube.com/watch?v=-0uBYZn8Ckw&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"},
+                {"title": "Dietary Tips for Parkinson's Patients", "url": "https://www.youtube.com/watch?v=qXCdPBFHp5A&pp=ygUjcGFya2luc29uIGRpc2Vhc2UgZXhwbGFuYXRpb24gdGFtaWw%3D"}
+                # Add more video URLs and titles as needed
             ]
-        
-            # Create a DataFrame with the video URLs
-            videos_df = pd.DataFrame({"YouTube Video": video_urls})
-        
-            # Add arrow buttons below the video to navigate
-            col1, col2, col3 = st.columns([1, 8, 1])
-            with col2:
-                selected_video_index = st.session_state.get("selected_video_index", 0)
-                if st.button("◄"):
-                    selected_video_index = max(0, selected_video_index - 1)
-                if st.button("►"):
-                    selected_video_index = min(len(video_urls) - 1, selected_video_index + 1)
-                st.session_state["selected_video_index"] = selected_video_index
-        
+            
+            # Convert video data to DataFrame
+            videos_df = pd.DataFrame(video_data)
+            
+            # Display the carousel of videos
+            selected_video_index = st.select_slider(
+                "Select a Video",
+                options=videos_df["title"].tolist(),
+                format_func=lambda x: x
+            )
+            
+            # Get the URL of the selected video
+            selected_video_url = videos_df.loc[videos_df["title"] == selected_video_index, "url"].values[0]
+            
             # Display the selected video using the st_player component
-            st_player(videos_df.iloc[selected_video_index, 0])
+            st.video(selected_video_url)
         
         if __name__ == '__main__':
             advices_youtube_page()
